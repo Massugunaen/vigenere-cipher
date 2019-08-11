@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.obj"
-  "CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.obj"
-  "CMakeFiles/Vigenere_cipher.dir/testing.cpp.obj"
+  "CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.obj"
   "Vigenere_cipher.pdb"
   "Vigenere_cipher.exe"
   "Vigenere_cipher.exe.manifest"

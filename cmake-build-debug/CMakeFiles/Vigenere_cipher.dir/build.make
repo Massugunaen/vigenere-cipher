@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.1.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2019.1.2\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.2\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\GitHubProjects\Vigenere_cipher
+CMAKE_SOURCE_DIR = E:\vigenere-cipher
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\GitHubProjects\Vigenere_cipher\cmake-build-debug
+CMAKE_BINARY_DIR = E:\vigenere-cipher\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Vigenere_cipher.dir/depend.make
@@ -56,62 +56,32 @@ include CMakeFiles/Vigenere_cipher.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Vigenere_cipher.dir/flags.make
 
-CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.obj: CMakeFiles/Vigenere_cipher.dir/flags.make
-CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.obj: ../vigenere_cipher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\GitHubProjects\Vigenere_cipher\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Vigenere_cipher.dir\vigenere_cipher.cpp.obj -c D:\GitHubProjects\Vigenere_cipher\vigenere_cipher.cpp
+CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.obj: CMakeFiles/Vigenere_cipher.dir/flags.make
+CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.obj: ../MAIN_PROGRAM.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\vigenere-cipher\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Vigenere_cipher.dir\MAIN_PROGRAM.cpp.obj -c E:\vigenere-cipher\MAIN_PROGRAM.cpp
 
-CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\GitHubProjects\Vigenere_cipher\vigenere_cipher.cpp > CMakeFiles\Vigenere_cipher.dir\vigenere_cipher.cpp.i
+CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vigenere-cipher\MAIN_PROGRAM.cpp > CMakeFiles\Vigenere_cipher.dir\MAIN_PROGRAM.cpp.i
 
-CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\GitHubProjects\Vigenere_cipher\vigenere_cipher.cpp -o CMakeFiles\Vigenere_cipher.dir\vigenere_cipher.cpp.s
-
-CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.obj: CMakeFiles/Vigenere_cipher.dir/flags.make
-CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.obj: ../testing_decrypting.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\GitHubProjects\Vigenere_cipher\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Vigenere_cipher.dir\testing_decrypting.cpp.obj -c D:\GitHubProjects\Vigenere_cipher\testing_decrypting.cpp
-
-CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\GitHubProjects\Vigenere_cipher\testing_decrypting.cpp > CMakeFiles\Vigenere_cipher.dir\testing_decrypting.cpp.i
-
-CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\GitHubProjects\Vigenere_cipher\testing_decrypting.cpp -o CMakeFiles\Vigenere_cipher.dir\testing_decrypting.cpp.s
-
-CMakeFiles/Vigenere_cipher.dir/testing.cpp.obj: CMakeFiles/Vigenere_cipher.dir/flags.make
-CMakeFiles/Vigenere_cipher.dir/testing.cpp.obj: ../testing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\GitHubProjects\Vigenere_cipher\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Vigenere_cipher.dir/testing.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Vigenere_cipher.dir\testing.cpp.obj -c D:\GitHubProjects\Vigenere_cipher\testing.cpp
-
-CMakeFiles/Vigenere_cipher.dir/testing.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vigenere_cipher.dir/testing.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\GitHubProjects\Vigenere_cipher\testing.cpp > CMakeFiles\Vigenere_cipher.dir\testing.cpp.i
-
-CMakeFiles/Vigenere_cipher.dir/testing.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vigenere_cipher.dir/testing.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\GitHubProjects\Vigenere_cipher\testing.cpp -o CMakeFiles\Vigenere_cipher.dir\testing.cpp.s
+CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vigenere-cipher\MAIN_PROGRAM.cpp -o CMakeFiles\Vigenere_cipher.dir\MAIN_PROGRAM.cpp.s
 
 # Object files for target Vigenere_cipher
 Vigenere_cipher_OBJECTS = \
-"CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.obj" \
-"CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.obj" \
-"CMakeFiles/Vigenere_cipher.dir/testing.cpp.obj"
+"CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.obj"
 
 # External object files for target Vigenere_cipher
 Vigenere_cipher_EXTERNAL_OBJECTS =
 
-Vigenere_cipher.exe: CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.obj
-Vigenere_cipher.exe: CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.obj
-Vigenere_cipher.exe: CMakeFiles/Vigenere_cipher.dir/testing.cpp.obj
+Vigenere_cipher.exe: CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.obj
 Vigenere_cipher.exe: CMakeFiles/Vigenere_cipher.dir/build.make
 Vigenere_cipher.exe: CMakeFiles/Vigenere_cipher.dir/linklibs.rsp
 Vigenere_cipher.exe: CMakeFiles/Vigenere_cipher.dir/objects1.rsp
 Vigenere_cipher.exe: CMakeFiles/Vigenere_cipher.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\GitHubProjects\Vigenere_cipher\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Vigenere_cipher.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\vigenere-cipher\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Vigenere_cipher.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Vigenere_cipher.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +94,6 @@ CMakeFiles/Vigenere_cipher.dir/clean:
 .PHONY : CMakeFiles/Vigenere_cipher.dir/clean
 
 CMakeFiles/Vigenere_cipher.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\GitHubProjects\Vigenere_cipher D:\GitHubProjects\Vigenere_cipher D:\GitHubProjects\Vigenere_cipher\cmake-build-debug D:\GitHubProjects\Vigenere_cipher\cmake-build-debug D:\GitHubProjects\Vigenere_cipher\cmake-build-debug\CMakeFiles\Vigenere_cipher.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\vigenere-cipher E:\vigenere-cipher E:\vigenere-cipher\cmake-build-debug E:\vigenere-cipher\cmake-build-debug E:\vigenere-cipher\cmake-build-debug\CMakeFiles\Vigenere_cipher.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Vigenere_cipher.dir/depend
 

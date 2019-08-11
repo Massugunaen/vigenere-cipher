@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.1.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2019.1.2\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.2\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\GitHubProjects\Vigenere_cipher
+CMAKE_SOURCE_DIR = E:\vigenere-cipher
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\GitHubProjects\Vigenere_cipher\cmake-build-debug
+CMAKE_BINARY_DIR = E:\vigenere-cipher\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = D:\GitHubProjects\Vigenere_cipher\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2019.1.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2019.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2019.1.2\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2019.2\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\GitHubProjects\Vigenere_cipher\cmake-build-debug\CMakeFiles D:\GitHubProjects\Vigenere_cipher\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\vigenere-cipher\cmake-build-debug\CMakeFiles E:\vigenere-cipher\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\GitHubProjects\Vigenere_cipher\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\vigenere-cipher\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,86 +122,32 @@ Vigenere_cipher/fast:
 	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/build
 .PHONY : Vigenere_cipher/fast
 
-testing.obj: testing.cpp.obj
+MAIN_PROGRAM.obj: MAIN_PROGRAM.cpp.obj
 
-.PHONY : testing.obj
-
-# target to build an object file
-testing.cpp.obj:
-	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/testing.cpp.obj
-.PHONY : testing.cpp.obj
-
-testing.i: testing.cpp.i
-
-.PHONY : testing.i
-
-# target to preprocess a source file
-testing.cpp.i:
-	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/testing.cpp.i
-.PHONY : testing.cpp.i
-
-testing.s: testing.cpp.s
-
-.PHONY : testing.s
-
-# target to generate assembly for a file
-testing.cpp.s:
-	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/testing.cpp.s
-.PHONY : testing.cpp.s
-
-testing_decrypting.obj: testing_decrypting.cpp.obj
-
-.PHONY : testing_decrypting.obj
+.PHONY : MAIN_PROGRAM.obj
 
 # target to build an object file
-testing_decrypting.cpp.obj:
-	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.obj
-.PHONY : testing_decrypting.cpp.obj
+MAIN_PROGRAM.cpp.obj:
+	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.obj
+.PHONY : MAIN_PROGRAM.cpp.obj
 
-testing_decrypting.i: testing_decrypting.cpp.i
+MAIN_PROGRAM.i: MAIN_PROGRAM.cpp.i
 
-.PHONY : testing_decrypting.i
-
-# target to preprocess a source file
-testing_decrypting.cpp.i:
-	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.i
-.PHONY : testing_decrypting.cpp.i
-
-testing_decrypting.s: testing_decrypting.cpp.s
-
-.PHONY : testing_decrypting.s
-
-# target to generate assembly for a file
-testing_decrypting.cpp.s:
-	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/testing_decrypting.cpp.s
-.PHONY : testing_decrypting.cpp.s
-
-vigenere_cipher.obj: vigenere_cipher.cpp.obj
-
-.PHONY : vigenere_cipher.obj
-
-# target to build an object file
-vigenere_cipher.cpp.obj:
-	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.obj
-.PHONY : vigenere_cipher.cpp.obj
-
-vigenere_cipher.i: vigenere_cipher.cpp.i
-
-.PHONY : vigenere_cipher.i
+.PHONY : MAIN_PROGRAM.i
 
 # target to preprocess a source file
-vigenere_cipher.cpp.i:
-	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.i
-.PHONY : vigenere_cipher.cpp.i
+MAIN_PROGRAM.cpp.i:
+	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.i
+.PHONY : MAIN_PROGRAM.cpp.i
 
-vigenere_cipher.s: vigenere_cipher.cpp.s
+MAIN_PROGRAM.s: MAIN_PROGRAM.cpp.s
 
-.PHONY : vigenere_cipher.s
+.PHONY : MAIN_PROGRAM.s
 
 # target to generate assembly for a file
-vigenere_cipher.cpp.s:
-	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/vigenere_cipher.cpp.s
-.PHONY : vigenere_cipher.cpp.s
+MAIN_PROGRAM.cpp.s:
+	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.s
+.PHONY : MAIN_PROGRAM.cpp.s
 
 # Help Target
 help:
@@ -212,15 +158,9 @@ help:
 	@echo ... Vigenere_cipher
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... testing.obj
-	@echo ... testing.i
-	@echo ... testing.s
-	@echo ... testing_decrypting.obj
-	@echo ... testing_decrypting.i
-	@echo ... testing_decrypting.s
-	@echo ... vigenere_cipher.obj
-	@echo ... vigenere_cipher.i
-	@echo ... vigenere_cipher.s
+	@echo ... MAIN_PROGRAM.obj
+	@echo ... MAIN_PROGRAM.i
+	@echo ... MAIN_PROGRAM.s
 .PHONY : help
 
 
