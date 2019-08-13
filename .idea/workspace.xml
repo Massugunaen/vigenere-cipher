@@ -12,11 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="047248a1-e586-41bc-9f94-8158ee329764" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAIN_PROGRAM.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN_PROGRAM.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Vigenere_cipher.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Vigenere_cipher.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/testing.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Vigenere_cipher.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Vigenere_cipher.dir/objects.a" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +53,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="Vigenere_cipher" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -127,6 +130,8 @@
       <workItem from="1565588124469" duration="439000" />
       <workItem from="1565631584838" duration="1070000" />
       <workItem from="1565705240738" duration="2057000" />
+      <workItem from="1565709767545" duration="1800000" />
+      <workItem from="1565720485027" duration="684000" />
     </task>
     <servers />
   </component>
