@@ -1,3 +1,15 @@
+/*
+ * The idea is: encrypting/decrypting the message for the user/users
+ * using key-word for both sides to send secret messages to each other.
+ * 1) you choose language among the languages you're allowed to choose
+ * 2) you choose encrypting/decrypting mode
+ * 3) you choose key-word for encrypting/decrypting mode
+ * 4) you type in the message you want to send to your speaker
+ * 5) you receive encrypted/decrypted word/phrase
+ * 6) you use it to tell your colleague info you want
+ * 7) you are allowed to add new features and upgrade the script
+*/
+
 #include <iostream>
 #include <vector>
 #include <algorithm>

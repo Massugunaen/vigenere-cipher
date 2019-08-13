@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/vigenere-cipher/MAIN_PROGRAM.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+string
+-
+
