@@ -83,6 +83,12 @@
 		<Unit filename="E:/vigenere-cipher/MAIN_PROGRAM.cpp">
 			<Option target="Vigenere_cipher"/>
 		</Unit>
+		<Unit filename="E:/vigenere-cipher/UPDATE/UPGRADE.cpp">
+			<Option target="Vigenere_cipher"/>
+		</Unit>
+		<Unit filename="E:/vigenere-cipher/testing.cpp">
+			<Option target="Vigenere_cipher"/>
+		</Unit>
 		<Unit filename="E:/vigenere-cipher/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

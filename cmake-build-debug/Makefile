@@ -149,6 +149,60 @@ MAIN_PROGRAM.cpp.s:
 	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/MAIN_PROGRAM.cpp.s
 .PHONY : MAIN_PROGRAM.cpp.s
 
+UPDATE/UPGRADE.obj: UPDATE/UPGRADE.cpp.obj
+
+.PHONY : UPDATE/UPGRADE.obj
+
+# target to build an object file
+UPDATE/UPGRADE.cpp.obj:
+	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/UPDATE/UPGRADE.cpp.obj
+.PHONY : UPDATE/UPGRADE.cpp.obj
+
+UPDATE/UPGRADE.i: UPDATE/UPGRADE.cpp.i
+
+.PHONY : UPDATE/UPGRADE.i
+
+# target to preprocess a source file
+UPDATE/UPGRADE.cpp.i:
+	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/UPDATE/UPGRADE.cpp.i
+.PHONY : UPDATE/UPGRADE.cpp.i
+
+UPDATE/UPGRADE.s: UPDATE/UPGRADE.cpp.s
+
+.PHONY : UPDATE/UPGRADE.s
+
+# target to generate assembly for a file
+UPDATE/UPGRADE.cpp.s:
+	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/UPDATE/UPGRADE.cpp.s
+.PHONY : UPDATE/UPGRADE.cpp.s
+
+testing.obj: testing.cpp.obj
+
+.PHONY : testing.obj
+
+# target to build an object file
+testing.cpp.obj:
+	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/testing.cpp.obj
+.PHONY : testing.cpp.obj
+
+testing.i: testing.cpp.i
+
+.PHONY : testing.i
+
+# target to preprocess a source file
+testing.cpp.i:
+	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/testing.cpp.i
+.PHONY : testing.cpp.i
+
+testing.s: testing.cpp.s
+
+.PHONY : testing.s
+
+# target to generate assembly for a file
+testing.cpp.s:
+	$(MAKE) -f CMakeFiles\Vigenere_cipher.dir\build.make CMakeFiles/Vigenere_cipher.dir/testing.cpp.s
+.PHONY : testing.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,6 +215,12 @@ help:
 	@echo ... MAIN_PROGRAM.obj
 	@echo ... MAIN_PROGRAM.i
 	@echo ... MAIN_PROGRAM.s
+	@echo ... UPDATE/UPGRADE.obj
+	@echo ... UPDATE/UPGRADE.i
+	@echo ... UPDATE/UPGRADE.s
+	@echo ... testing.obj
+	@echo ... testing.i
+	@echo ... testing.s
 .PHONY : help
 
 

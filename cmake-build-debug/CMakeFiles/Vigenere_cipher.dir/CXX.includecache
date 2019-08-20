@@ -6,13 +6,9 @@
 
 #IncludeRegexTransform: 
 
-E:/vigenere-cipher/MAIN_PROGRAM.cpp
+E:/vigenere-cipher/testing.cpp
 iostream
 -
 vector
--
-algorithm
--
-string
 -
 

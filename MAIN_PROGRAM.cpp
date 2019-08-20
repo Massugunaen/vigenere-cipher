@@ -9,6 +9,7 @@
  * 6) you use it to tell your colleague info you want
  * 7) you are allowed to add new features and upgrade the script
 */
+/*TODO upgrade the cipher by using the number of "rolls" with the default numeral as '1'*/
 
 #include <iostream>
 #include <vector>
