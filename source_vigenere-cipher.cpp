@@ -16,6 +16,12 @@
 #include <algorithm>
 #include <string>
 
+
+std::string encrypting_function() {
+	std::string imposed_argument;
+	return imposed_argument;
+}
+
 int main () {
     std::cout << "Welcome to vigenere cipher, please input wishing language" << std::endl;
     std::cout << "Supported languages are: 'english'" << std::endl;
