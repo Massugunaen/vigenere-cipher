@@ -6,7 +6,6 @@
 
 
 int main () {
-    std::cout << "Input the language" << std::endl;
 
     std::string imposed_language = data_input("Supported languages are: 'eng'");
     if (imposed_language == "eng") {
@@ -24,7 +23,7 @@ int main () {
 
             std::string imposed_key = data_input("Input your key:");
 
-            std::string imposed_message = data_input("Input your message:"); 
+            std::string imposed_message = data_input("Input your message for encryption:"); 
 
             std::vector<char> message_to_encrypt;
             message_to_encrypt.reserve(0);
