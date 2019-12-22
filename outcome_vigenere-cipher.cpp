@@ -1,14 +1,14 @@
+#include "functions.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <string>
-#include <functions.cpp>
 
 
 int main () {
     std::cout << "Welcome to vigenere cipher, please input wishing language" << std::endl;
 
-    std::string imposed_language = functions.language_input();
+    std::string imposed_language = language_input();
     if (imposed_language == "english") {
         const std::vector<char> english_language = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
                                                     'm', 'n','o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
@@ -19,7 +19,7 @@ int main () {
         std::cout << "Now choose working mode" << std::endl;
         std::cout << "Supported modes are: 'encrypting', 'decrypting'" << std::endl;
 
-        std::string input_of_mode == functions.mode_input();
+        std::string input_of_mode = mode_input();
         while (std::cin >> input_of_mode) {
             if (input_of_mode == "encrypting") {
                 std::cout << "You chose encrypting as working mode" << std::endl;
