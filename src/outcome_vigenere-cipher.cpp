@@ -1,4 +1,4 @@
-#include "functions.h"
+#include "input_data.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -36,7 +36,6 @@ int main () {
                     }
                 }
                 e_keyWord.shrink_to_fit();
-
                 std::vector<char> message_to_encrypt;
                 message_to_encrypt.reserve(0);
                 std::cout << "Please insert your phrase, you want to encrypt, use '.' at the end to stop the process" << std::endl;
@@ -50,10 +49,8 @@ int main () {
                     }
                 }
                 message_to_encrypt.shrink_to_fit();
-
                 std::vector<char> encrypted_message;
                 encrypted_message.reserve(0);
-
                 char letter_for_encrypted_message;
                 int index(0);
 
