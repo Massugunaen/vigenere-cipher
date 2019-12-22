@@ -15,11 +15,10 @@ int main () {
                                                     'y', 'z'};
         std::vector<char> rotated_english_language = english_language;
         std::cout << "You chose English as working language" << std::endl;
-        std::cout << "Choose working mode" << std::endl;
         std::cout << "Supported modes are: -e, --encr" << std::endl;
         std::cout << "Supported modes are: -d, --decr" << std::endl;
 
-        std::string chosen_mode = data_input("Input mode");
+        std::string chosen_mode = data_input("Choose working mode");
         if (chosen_mode == "-e" || chosen_mode == "--encr") {
             std::cout << "You chose encrypt as working mode" << std::endl;
 
@@ -42,9 +41,7 @@ int main () {
                         for (int k(index); k < imposed_key.size();) {
                             for (int l = 0; l < rotated_english_language.size(); l++) {
                                 if (imposed_key[k] == rotated_english_language[l]) {
-                                    std::rotate(rotated_english_language.begin(),
-                                            rotated_english_language.begin()+l,
-                                            rotated_english_language.end());
+                                    std::rotate(rotated_english_language.begin(), rotated_english_language.begin()+l, rotated_english_language.end());
                                     letter_for_encrypted_message = rotated_english_language[j];
                                     message_to_encrypt.push_back(letter_for_encrypted_message);
                                     rotated_english_language = english_language;
