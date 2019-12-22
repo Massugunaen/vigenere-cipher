@@ -18,8 +18,7 @@
 
 
 std::string encrypting_function() {
-	std::string imposed_argument;
-	return imposed_argument;
+	
 }
 
 int main () {
