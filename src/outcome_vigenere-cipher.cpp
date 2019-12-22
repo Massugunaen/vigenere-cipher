@@ -6,10 +6,11 @@
 
 
 int main () {
-    std::cout << "Welcome to vigenere cipher, please input wishing language" << std::endl;
+    std::cout << "Input the language" << std::endl;
 
     std::string imposed_language = language_input();
     if (imposed_language == "english") {
+			std::cout << "hehe xd" << std::endl;
         const std::vector<char> english_language = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
                                                     'm', 'n','o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
                                                     'y', 'z'};
@@ -30,9 +31,8 @@ int main () {
                 while (std::cin >> letter_for_keyword) {
                     if (letter_for_keyword != '.') {
                         e_keyWord.push_back(letter_for_keyword);
-                    }
-                    else {
-                        break;
+                    } else {
+						break;
                     }
                 }
                 e_keyWord.shrink_to_fit();
@@ -43,8 +43,7 @@ int main () {
                 while (std::cin >> letter_for_message_to_encrypt) {
                     if (letter_for_message_to_encrypt != '.') {
                         message_to_encrypt.push_back(letter_for_message_to_encrypt);
-                    }
-                    else {
+                    } else {
                         break;
                     }
                 }
@@ -70,8 +69,7 @@ int main () {
                                 }
                                 if (index == (e_keyWord.size()-1)) {
                                     index = 0;
-                                }
-                                else {
+                                } else {
                                     index++;
                                 }
                                 break;
@@ -87,7 +85,7 @@ int main () {
                 }
                 return EXIT_SUCCESS;
             }
-            else if (input_of_mode == "decrypting") {
+			else if (input_of_mode == "decrypting") {
                 std::cout << "You chose decrypting as working mode" << std::endl;
                 std::vector<char> d_keyWord;
                 d_keyWord.reserve(0);
@@ -96,8 +94,7 @@ int main () {
                 while (std::cin >> letter_for_keyword) {
                     if (letter_for_keyword != '.') {
                         d_keyWord.push_back(letter_for_keyword);
-                    }
-                    else {
+                    } else {
                         break;
                     }
                 }
@@ -111,8 +108,7 @@ int main () {
                 while (std::cin >> letter_for_message_to_decrypt) {
                     if (letter_for_message_to_decrypt != '.') {
                         message_to_decrypt.push_back(letter_for_message_to_decrypt);
-                    }
-                    else {
+                    } else {
                         break;
                     }
                 }
@@ -142,8 +138,7 @@ int main () {
                                             }
                                             if (index1 == (message_to_decrypt.size()-1)) {
                                                 index1 = 0;
-                                            }
-                                            else {
+                                            } else {
                                                 index1++;
                                             }
                                             break;
@@ -153,8 +148,7 @@ int main () {
                                 }
                                 if (index == (d_keyWord.size()-1)) {
                                     index = 0;
-                                }
-                                else {
+                                } else {
                                     index++;
                                 }
                                 break;
@@ -169,14 +163,12 @@ int main () {
                     std::cout << decrypted_message[i];
                 }
                 return EXIT_SUCCESS;
-            }
-            else {
+            } else {
                 std::cout << "mistake in choosing mode, please try again" << std::endl;
                 continue;
             }
         }
-    }
-    else {
+    } else {
         std::cout << "Mistake in choosing language, please try again" << std::endl;
     }
 }

@@ -12,6 +12,13 @@ std::string language_input() {
 }
 
 
+std::string mode_input() {
+	std::cout << "Input your phrase to encrypt/decrypt" << std::endl;
+	std::string mode_input;
+    getline(std::cin, mode_input); 
+  	return mode_input;
+}
+
 std::string key_input() {
 	std::cout << "Please input your key" << std::endl;
 	std::string imposed_key;
@@ -25,13 +32,5 @@ std::string phrase_input() {
 	std::string imposed_phrase;
     getline(std::cin, imposed_phrase); 
   	return imposed_phrase;
-}
-
-
-std::string mode_input() {
-	std::cout << "Input your phrase to encrypt/decrypt" << std::endl;
-	std::string mode_input;
-    getline(std::cin, mode_input); 
-  	return mode_input;
 }
 
