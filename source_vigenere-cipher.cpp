@@ -18,7 +18,11 @@
 
 
 std::string encrypting_function() {
-	
+	std::string imposed_language;
+	std::cout << "Please enter your name: \n"; 
+    	getline(std::cin, imposed_language); 
+	std::cout << "Hello, " << imposed_language << " welcome to GfG !\n"; 
+  	return imposed_language;
 }
 
 int main () {
