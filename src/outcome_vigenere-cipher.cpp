@@ -9,21 +9,20 @@ int main () {
     std::cout << "Input the language" << std::endl;
 
     std::string imposed_language = language_input();
-    if (imposed_language == "english") {
-			std::cout << "hehe xd" << std::endl;
+    if (imposed_language == "eng") {
         const std::vector<char> english_language = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
                                                     'm', 'n','o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
                                                     'y', 'z'};
         std::vector<char> rotated_english_language = english_language;
-
         std::cout << "You chose English as working language" << std::endl;
         std::cout << "Now choose working mode" << std::endl;
-        std::cout << "Supported modes are: 'encrypting', 'decrypting'" << std::endl;
+        std::cout << "Supported modes are: -e, --encr" << std::endl;
+        std::cout << "Supported modes are: -d, --decr" << std::endl;
 
-        std::string input_of_mode = mode_input();
-        while (std::cin >> input_of_mode) {
-            if (input_of_mode == "encrypting") {
-                std::cout << "You chose encrypting as working mode" << std::endl;
+        std::string chosen_mode = mode_input();
+        while (std::cin >> chosen_mode) {
+            if (chosen_mode == "-e" || chosen_mode == "--encr") {
+                std::cout << "You chose encrypt as working mode" << std::endl;
                 std::vector<char> e_keyWord;
                 e_keyWord.reserve(0);
                 std::cout << "Please insert your key, use '.' at the end to stop the process" << std::endl;
@@ -84,8 +83,8 @@ int main () {
                     std::cout << encrypted_message[i];
                 }
                 return EXIT_SUCCESS;
-            }
-			else if (input_of_mode == "decrypting") {
+
+            } else if (chosen_mode == "-d" || chosen_mode == "--decr") {
                 std::cout << "You chose decrypting as working mode" << std::endl;
                 std::vector<char> d_keyWord;
                 d_keyWord.reserve(0);

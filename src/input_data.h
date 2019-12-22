@@ -5,7 +5,7 @@
 
 
 std::string language_input() {
-	std::cout << "Supported languages are: 'english'" << std::endl;
+	std::cout << "Supported languages are: 'eng'" << std::endl;
 	std::string imposed_language;
     getline(std::cin, imposed_language); 
   	return imposed_language;
@@ -13,7 +13,7 @@ std::string language_input() {
 
 
 std::string mode_input() {
-	std::cout << "Input your phrase to encrypt/decrypt" << std::endl;
+	std::cout << "Input your mode to encrypt/decrypt" << std::endl;
 	std::string mode_input;
     getline(std::cin, mode_input); 
   	return mode_input;
