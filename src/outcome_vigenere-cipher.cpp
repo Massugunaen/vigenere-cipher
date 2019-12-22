@@ -8,33 +8,24 @@
 int main () {
     std::cout << "Input the language" << std::endl;
 
-    std::string imposed_language = language_input();
+    std::string imposed_language = data_input("Supported languages are: 'eng'");
     if (imposed_language == "eng") {
         const std::vector<char> english_language = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
                                                     'm', 'n','o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
                                                     'y', 'z'};
         std::vector<char> rotated_english_language = english_language;
         std::cout << "You chose English as working language" << std::endl;
-        std::cout << "Now choose working mode" << std::endl;
+        std::cout << "Choose working mode" << std::endl;
         std::cout << "Supported modes are: -e, --encr" << std::endl;
         std::cout << "Supported modes are: -d, --decr" << std::endl;
 
-        std::string chosen_mode = mode_input();
-        while (std::cin >> chosen_mode) {
+        std::string chosen_mode = data_input("Input mode");
             if (chosen_mode == "-e" || chosen_mode == "--encr") {
                 std::cout << "You chose encrypt as working mode" << std::endl;
-                std::vector<char> e_keyWord;
-                e_keyWord.reserve(0);
+                
+                std::string imposed_key = data_input("Input your key");
+
                 std::cout << "Please insert your key, use '.' at the end to stop the process" << std::endl;
-                char letter_for_keyword;
-                while (std::cin >> letter_for_keyword) {
-                    if (letter_for_keyword != '.') {
-                        e_keyWord.push_back(letter_for_keyword);
-                    } else {
-						break;
-                    }
-                }
-                e_keyWord.shrink_to_fit();
                 std::vector<char> message_to_encrypt;
                 message_to_encrypt.reserve(0);
                 std::cout << "Please insert your phrase, you want to encrypt, use '.' at the end to stop the process" << std::endl;
@@ -55,9 +46,9 @@ int main () {
                 for (int i = 0; i < message_to_encrypt.size(); i++) {
                     for (int j = 0; j < english_language.size(); j++) {
                         if (message_to_encrypt[i] == english_language[j]) {
-                            for (int k(index); k < e_keyWord.size();) {
+                            for (int k(index); k < imposed_key.size();) {
                                 for (int l = 0; l < rotated_english_language.size(); l++) {
-                                    if (e_keyWord[k] == rotated_english_language[l]) {
+                                    if (imposed_key[k] == rotated_english_language[l]) {
                                         std::rotate(rotated_english_language.begin(),
                                                 rotated_english_language.begin()+l,
                                                 rotated_english_language.end());
@@ -66,7 +57,7 @@ int main () {
                                         rotated_english_language = english_language;
                                     }
                                 }
-                                if (index == (e_keyWord.size()-1)) {
+                                if (index == (imposed_key.size()-1)) {
                                     index = 0;
                                 } else {
                                     index++;
@@ -164,10 +155,7 @@ int main () {
                 return EXIT_SUCCESS;
             } else {
                 std::cout << "mistake in choosing mode, please try again" << std::endl;
-                continue;
+                //continue;
             }
         }
-    } else {
-        std::cout << "Mistake in choosing language, please try again" << std::endl;
     }
-}

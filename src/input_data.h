@@ -4,21 +4,6 @@
 #include <string>
 
 
-std::string language_input() {
-	std::cout << "Supported languages are: 'eng'" << std::endl;
-	std::string imposed_language;
-    getline(std::cin, imposed_language); 
-  	return imposed_language;
-}
-
-
-std::string mode_input() {
-	std::cout << "Input your mode to encrypt/decrypt" << std::endl;
-	std::string mode_input;
-    getline(std::cin, mode_input); 
-  	return mode_input;
-}
-
 std::string key_input() {
 	std::cout << "Please input your key" << std::endl;
 	std::string imposed_key;
@@ -26,9 +11,17 @@ std::string key_input() {
   	return imposed_key;
 }
 
-
 std::string phrase_input() {
 	std::cout << "Input your phrase to encrypt/decrypt" << std::endl;
+	std::string imposed_phrase;
+    getline(std::cin, imposed_phrase); 
+  	return imposed_phrase;
+}
+
+
+
+std::string data_input(std::string phrase) {
+	std::cout << phrase << std::endl;
 	std::string imposed_phrase;
     getline(std::cin, imposed_phrase); 
   	return imposed_phrase;
