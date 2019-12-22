@@ -18,21 +18,19 @@
 #include <string>
 
 
-std::string encrypting_function() {
+std::string language_input() {
+	std::cout << "Supported languages are: 'english'" << std::endl;
 	std::string imposed_language;
-	std::cout << "Please enter your name: \n"; 
     	getline(std::cin, imposed_language); 
-	std::cout << "Hello, " << imposed_language << " welcome to GfG !\n"; 
   	return imposed_language;
 }
 
+
 int main () {
     std::cout << "Welcome to vigenere cipher, please input wishing language" << std::endl;
-    std::cout << "Supported languages are: 'english'" << std::endl;
 
-    std::string input_of_language = encrypting_function();
-    while (std::cin >> input_of_language) {
-        if (input_of_language == "english") {
+    std::string imposed_language = language_input();
+        if (imposed_language == "english") {
             const std::vector<char> english_language = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
                                                         'm', 'n','o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
                                                         'y', 'z'};
@@ -206,5 +204,4 @@ int main () {
         else {
             std::cout << "Mistake in choosing language, please try again" << std::endl;
         }
-    }
 }
