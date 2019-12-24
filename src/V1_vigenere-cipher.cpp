@@ -17,13 +17,6 @@
 #include <string>
 
 
-std::string encrypting_function() {
-	std::string imposed_language;
-	std::cout << "Please enter your name: \n"; 
-    	getline(std::cin, imposed_language); 
-	std::cout << "Hello, " << imposed_language << " welcome to GfG !\n"; 
-  	return imposed_language;
-}
 
 int main () {
     std::cout << "Welcome to vigenere cipher, please input wishing language" << std::endl;
@@ -40,6 +33,7 @@ int main () {
             std::cout << "Now choose working mode" << std::endl;
             std::cout << "Supported modes are: 'encrypting', 'decrypting'" << std::endl;
 
+            
             std::string input_of_mode;
             while (std::cin >> input_of_mode) {
                 if (input_of_mode == "encrypting") {
