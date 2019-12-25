@@ -9,13 +9,17 @@ std::string data_input(std::string phrase) {
   	return imposed_phrase;
 }
 
-/*
- * This is test function for finding out if 
- * arg str is array of chars 
- */
-void testString(std::string str) {
-    for (int i = 0; i < str.length(); i++) {
-        std::cout << str[i];
+
+std::string Rdata_input() {
+    std::string data;
+    std::cin >> data;
+    if (data == "-e" || data == "--encr") {
+        return data;
+    } else if (data == "-d" || data == "--decr") {
+        return data;
+    } else {
+        std::cout << "Mistake in choosing mode, please try again" << std::endl;
+        return Rdata_input();
     }
 }
 

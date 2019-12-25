@@ -12,9 +12,11 @@ int main () {
                                                 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     std::vector<char> *english_language_ptr = &english_language;
     std::cout << "Your working language is English" << std::endl;
-
-    std::string chosen_mode = data_input("Choose working mode\nSupported modes are: -e, --encr || -d, --decr");
     
+    std::cout << "Choose working mode\nSupported modes are: -e, --encr || -d, --decr" << std::endl;
+    std::string chosen_mode = Rdata_input();
+    
+    //better make mode input through recursion input
     if (chosen_mode == "-e" || chosen_mode == "--encr") {
         std::cout << "You chose encrypting mode" << std::endl;
 
@@ -98,7 +100,7 @@ int main () {
    //     }
    //     return EXIT_SUCCESS;
     } else {
-    std::cout << "mistake in choosing mode, please try again" << std::endl;
+    std::cout << "Mistake in choosing mode, please try again" << std::endl;
         EXIT_FAILURE;
     }
 }
