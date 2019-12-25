@@ -33,7 +33,6 @@ int main () {
             std::cout << "Now choose working mode" << std::endl;
             std::cout << "Supported modes are: 'encrypting', 'decrypting'" << std::endl;
 
-            
             std::string input_of_mode;
             while (std::cin >> input_of_mode) {
                 if (input_of_mode == "encrypting") {

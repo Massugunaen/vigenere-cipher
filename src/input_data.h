@@ -11,3 +11,12 @@ std::string data_input(std::string phrase) {
   	return imposed_phrase;
 }
 
+
+void testString(std::string str) {
+
+    for (int i = 0; i < str.length(); i++) {
+        std::cout << str[i];
+    }
+
+}
+
