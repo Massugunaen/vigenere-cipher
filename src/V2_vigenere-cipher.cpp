@@ -10,52 +10,53 @@ int main () {
     const std::vector<char> english_language = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l','m', 'n','o', 'p', 
                                                 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
-    std::vector<char> rotated_english_language = english_language;
     std::cout << "You chose English as working language" << std::endl;
-    std::cout << "Supported modes are: -e, --encr" << std::endl;
 
-    std::string chosen_mode = data_input("Choose working mode");
+    std::string chosen_mode = data_input("Choose working mode\nSupported modes are: -e, --encr");
+    
     if (chosen_mode == "-e" || chosen_mode == "--encr") {
-        std::cout << "You chose encrypt as working mode" << std::endl;
+        std::cout << "You chose encrypting mode" << std::endl;
 
         std::string imposed_key = data_input("Input your key:");
 
-        std::string imposed_message = data_input("Input your message for encryption:"); 
+        std::string imposed_message = data_input("Input your message:"); 
 
         std::vector<char> encrypted_message;
         encrypted_message.reserve(0);
+
         char letter_for_encrypted_message;
         int index(0);
+        
+        encrypting_algorithm(imposed_key, imposed_message, english_language);
+        //for (int i = 0; i < imposed_message.length(); i++) {
+        //    for (int j = 0; j < english_language.size(); j++) {
+        //        if (imposed_message[i] == english_language[j]) {
+        //            for (int k(index); k < imposed_key.length();) {
+        //                for (int l = 0; l < rotated_english_language.size(); l++) {
+        //                    if (imposed_key[k] == rotated_english_language[l]) {
+        //                        std::rotate(rotated_english_language.begin(), rotated_english_language.begin() + l, 
+        //                                rotated_english_language.end());
+        //                        letter_for_encrypted_message = rotated_english_language[j];
+        //                        encrypted_message.push_back(letter_for_encrypted_message);
+        //                        rotated_english_language = english_language;
+        //                    }
+        //                }
+        //                if (index == (imposed_key.size()-1)) {
+        //                    index = 0;
+        //                } else {
+        //                    index++;
+        //                }
+        //                break;
+        //            }
+        //        }
+        //    }
+        //}
+        //encrypted_message.shrink_to_fit();
 
-        for (int i = 0; i < imposed_message.length(); i++) {
-            for (int j = 0; j < english_language.size(); j++) {
-                if (imposed_message[i] == english_language[j]) {
-                    for (int k(index); k < imposed_key.length();) {
-                        for (int l = 0; l < rotated_english_language.size(); l++) {
-                            if (imposed_key[k] == rotated_english_language[l]) {
-                                std::rotate(rotated_english_language.begin(), rotated_english_language.begin() + l, 
-                                        rotated_english_language.end());
-                                letter_for_encrypted_message = rotated_english_language[j];
-                                encrypted_message.push_back(letter_for_encrypted_message);
-                                rotated_english_language = english_language;
-                            }
-                        }
-                        if (index == (imposed_key.size()-1)) {
-                            index = 0;
-                        } else {
-                            index++;
-                        }
-                        break;
-                    }
-                }
-            }
-        }
-        encrypted_message.shrink_to_fit();
-
-        std::cout << "Your encrypted phrase is the following line: ";
-        for (size_t i(0); i < encrypted_message.size(); i++) {
-            std::cout << encrypted_message[i];
-        }
+        //std::cout << "Your encrypted phrase is the following line: ";
+        //for (size_t i(0); i < encrypted_message.size(); i++) {
+        //    std::cout << encrypted_message[i];
+        //}
         return EXIT_SUCCESS;
     } 
    // else if (chosen_mode == "-d" || chosen_mode == "--decr") {
