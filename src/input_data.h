@@ -1,6 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
 #include <string>
 
 
@@ -11,7 +9,10 @@ std::string data_input(std::string phrase) {
   	return imposed_phrase;
 }
 
-
+/*
+ * This is test function for finding out if 
+ * arg str is array of chars 
+ */
 void testString(std::string str) {
 
     for (int i = 0; i < str.length(); i++) {

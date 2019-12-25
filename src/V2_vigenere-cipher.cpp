@@ -21,9 +21,6 @@ int main () {
 
         std::string imposed_message = data_input("Input your message for encryption:"); 
 
-        std::vector<char> message_to_encrypt;
-        message_to_encrypt.reserve(0);
-        message_to_encrypt.shrink_to_fit();
         std::vector<char> encrypted_message;
         encrypted_message.reserve(0);
         char letter_for_encrypted_message;
@@ -38,7 +35,7 @@ int main () {
                                 std::rotate(rotated_english_language.begin(), rotated_english_language.begin()+l, 
                                         rotated_english_language.end());
                                 letter_for_encrypted_message = rotated_english_language[j];
-                                message_to_encrypt.push_back(letter_for_encrypted_message);
+                                encrypted_message.push_back(letter_for_encrypted_message);
                                 rotated_english_language = english_language;
                             }
                         }
@@ -59,7 +56,6 @@ int main () {
             std::cout << encrypted_message[i];
         }
         return EXIT_SUCCESS;
-
     } 
    // else if (chosen_mode == "-d" || chosen_mode == "--decr") {
    //     std::cout << "You chose decrypting as working mode" << std::endl;
@@ -143,5 +139,4 @@ int main () {
    // std::cout << "mistake in choosing mode, please try again" << std::endl;
    // //continue;
    // }
-    
 }
