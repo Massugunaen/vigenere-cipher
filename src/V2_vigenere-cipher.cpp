@@ -1,4 +1,5 @@
 #include "input_data.h"
+#include "encrypt_data.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -32,7 +33,7 @@ int main () {
                     for (int k(index); k < imposed_key.length();) {
                         for (int l = 0; l < rotated_english_language.size(); l++) {
                             if (imposed_key[k] == rotated_english_language[l]) {
-                                std::rotate(rotated_english_language.begin(), rotated_english_language.begin()+l, 
+                                std::rotate(rotated_english_language.begin(), rotated_english_language.begin() + l, 
                                         rotated_english_language.end());
                                 letter_for_encrypted_message = rotated_english_language[j];
                                 encrypted_message.push_back(letter_for_encrypted_message);
