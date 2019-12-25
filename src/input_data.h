@@ -10,16 +10,16 @@ std::string data_input(std::string phrase) {
 }
 
 
-std::string Rdata_input() {
+std::string Rmode_input() {
     std::string data;
-    std::cin >> data;
+    getline(std::cin, data);
     if (data == "-e" || data == "--encr") {
-        return data;
+        return "encrypting";
     } else if (data == "-d" || data == "--decr") {
         return data;
     } else {
         std::cout << "Mistake in choosing mode, please try again" << std::endl;
-        return Rdata_input();
+        return Rmode_input();
     }
 }
 
