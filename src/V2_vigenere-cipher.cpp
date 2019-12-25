@@ -23,28 +23,18 @@ int main () {
 
         std::vector<char> encrypted_message;
         encrypted_message.reserve(0);
-
-        char letter_for_encrypted_message;
-        int index(0);
         
         encrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
         
         return EXIT_SUCCESS;
 
     } else if (chosen_mode == "-d" || chosen_mode == "--decr") {
-        std::cout << "You chose decrypting as working mode" << std::endl;
-        std::vector<char> d_keyWord;
-        d_keyWord.reserve(0);
-        std::cout << "Please insert your key, use '.' at the end to stop the process" << std::endl;
-        char letter_for_keyword;
-        while (std::cin >> letter_for_keyword) {
-            if (letter_for_keyword != '.') {
-                d_keyWord.push_back(letter_for_keyword);
-            } else {
-                break;
-            }
-        }
-        d_keyWord.shrink_to_fit();
+        std::cout << "You chose decrypting mode" << std::endl;
+        
+        std::string imposed_key = data_input("Input your prediction key:");
+
+        std::string imposed_message = data_input("Input your message:"); 
+
 
    //     std::vector<char> message_to_decrypt;
    //     message_to_decrypt.reserve(0);
