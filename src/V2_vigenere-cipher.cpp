@@ -7,12 +7,12 @@
 
 
 int main () {
-    const std::vector<char> english_language = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l','m', 'n','o', 'p', 
+    std::vector<char> english_language = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l','m', 'n','o', 'p', 
                                                 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+    std::vector<char> *english_language_ptr = &english_language;
+    std::cout << "Your working language is English" << std::endl;
 
-    std::cout << "You chose English as working language" << std::endl;
-
-    std::string chosen_mode = data_input("Choose working mode\nSupported modes are: -e, --encr");
+    std::string chosen_mode = data_input("Choose working mode\nSupported modes are: -e, --encr || -d, --decr");
     
     if (chosen_mode == "-e" || chosen_mode == "--encr") {
         std::cout << "You chose encrypting mode" << std::endl;
@@ -27,52 +27,24 @@ int main () {
         char letter_for_encrypted_message;
         int index(0);
         
-        encrypting_algorithm(imposed_key, imposed_message, english_language);
-        //for (int i = 0; i < imposed_message.length(); i++) {
-        //    for (int j = 0; j < english_language.size(); j++) {
-        //        if (imposed_message[i] == english_language[j]) {
-        //            for (int k(index); k < imposed_key.length();) {
-        //                for (int l = 0; l < rotated_english_language.size(); l++) {
-        //                    if (imposed_key[k] == rotated_english_language[l]) {
-        //                        std::rotate(rotated_english_language.begin(), rotated_english_language.begin() + l, 
-        //                                rotated_english_language.end());
-        //                        letter_for_encrypted_message = rotated_english_language[j];
-        //                        encrypted_message.push_back(letter_for_encrypted_message);
-        //                        rotated_english_language = english_language;
-        //                    }
-        //                }
-        //                if (index == (imposed_key.size()-1)) {
-        //                    index = 0;
-        //                } else {
-        //                    index++;
-        //                }
-        //                break;
-        //            }
-        //        }
-        //    }
-        //}
-        //encrypted_message.shrink_to_fit();
-
-        //std::cout << "Your encrypted phrase is the following line: ";
-        //for (size_t i(0); i < encrypted_message.size(); i++) {
-        //    std::cout << encrypted_message[i];
-        //}
+        encrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
+        
         return EXIT_SUCCESS;
-    } 
-   // else if (chosen_mode == "-d" || chosen_mode == "--decr") {
-   //     std::cout << "You chose decrypting as working mode" << std::endl;
-   //     std::vector<char> d_keyWord;
-   //     d_keyWord.reserve(0);
-   //     std::cout << "Please insert your key, use '.' at the end to stop the process" << std::endl;
-   //     char letter_for_keyword;
-   //     while (std::cin >> letter_for_keyword) {
-   //         if (letter_for_keyword != '.') {
-   //             d_keyWord.push_back(letter_for_keyword);
-   //         } else {
-   //             break;
-   //         }
-   //     }
-   //     d_keyWord.shrink_to_fit();
+
+    } else if (chosen_mode == "-d" || chosen_mode == "--decr") {
+        std::cout << "You chose decrypting as working mode" << std::endl;
+        std::vector<char> d_keyWord;
+        d_keyWord.reserve(0);
+        std::cout << "Please insert your key, use '.' at the end to stop the process" << std::endl;
+        char letter_for_keyword;
+        while (std::cin >> letter_for_keyword) {
+            if (letter_for_keyword != '.') {
+                d_keyWord.push_back(letter_for_keyword);
+            } else {
+                break;
+            }
+        }
+        d_keyWord.shrink_to_fit();
 
    //     std::vector<char> message_to_decrypt;
    //     message_to_decrypt.reserve(0);
@@ -137,8 +109,8 @@ int main () {
    //         std::cout << decrypted_message[i];
    //     }
    //     return EXIT_SUCCESS;
-   // } else {
-   // std::cout << "mistake in choosing mode, please try again" << std::endl;
-   // //continue;
-   // }
+    } else {
+    std::cout << "mistake in choosing mode, please try again" << std::endl;
+        EXIT_FAILURE;
+    }
 }
