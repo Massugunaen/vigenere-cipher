@@ -43,6 +43,7 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message,
 
     encrypted_message.shrink_to_fit();
 
+    // get rid of this terrible part 
     std::cout << "Your encrypted result: ";
     for (size_t i(0); i < encrypted_message.size(); i++) {
         std::cout << encrypted_message[i];
