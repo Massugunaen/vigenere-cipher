@@ -1,5 +1,6 @@
 #include "input_data.h"
 #include "encrypt_data.h"
+#include "decrypt_data.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -20,10 +21,7 @@ int main () {
         std::string imposed_key = data_input("Input your key:");
 
         std::string imposed_message = data_input("Input your message:"); 
-
-        std::vector<char> encrypted_message;
-        encrypted_message.reserve(0);
-        
+       
         encrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
         
         return EXIT_SUCCESS;
