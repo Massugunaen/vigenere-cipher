@@ -14,7 +14,6 @@ int main () {
     std::cout << "You chose English as working language" << std::endl;
     std::cout << "Supported modes are: -e, --encr" << std::endl;
 
-
     std::string chosen_mode = data_input("Choose working mode");
     if (chosen_mode == "-e" || chosen_mode == "--encr") {
         std::cout << "You chose encrypt as working mode" << std::endl;
