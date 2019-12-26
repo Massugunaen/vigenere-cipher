@@ -12,13 +12,11 @@ int main () {
                                           'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     std::vector<char> *english_language_ptr = &english_language;
     
-    std::cout << "Your working language is English" << std::endl;
-    
-    std::cout << "Choose working mode\nSupported modes are: -e, --encr || -d, --decr" << std::endl;
+    //std::cout << "Type -h for help" << std::endl;
     std::string chosen_mode = recurcive_mode_input();
     
     if (chosen_mode == "encrypting") {
-        std::cout << "You chose encrypting mode" << std::endl;
+        std::cout << "\nYou chose encrypting mode" << std::endl;
 
         std::string imposed_key = data_input("Input your key:");
 
@@ -29,7 +27,7 @@ int main () {
         return EXIT_SUCCESS;
 
     } else if (chosen_mode == "decrypting") {
-        std::cout << "You chose decrypting mode" << std::endl;
+        std::cout << "\nYou chose decrypting mode" << std::endl;
         
         std::string imposed_key = data_input("Input your prediction key:");
         

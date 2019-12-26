@@ -11,6 +11,8 @@ std::string data_input(std::string phrase) {
 }
 
 
+/*
+ */
 std::string recurcive_mode_input() {
     std::string data;
     getline(std::cin, data);
@@ -20,9 +22,15 @@ std::string recurcive_mode_input() {
     } else if (data == "-d" || data == "--decr") {
         return "decrypting";
     } else if (data == "-h" || data == "--help") {
-        return "help";
+        std::cout << "\nAvailable args: [--help] [-e | --encr] [-d | --decr]" << std::endl;
+        std::cout << "  -h | --help \tDisplay this message" << std::endl;
+        std::cout << "  -e | --encr \tEnter encrypting mode" << std::endl;
+        std::cout << "  -d | --decr \tEnter decrypting mode\n" << std::endl;
+        
+        return recurcive_mode_input();
     } else {
-        std::cout << "Mistake in choosing mode, please try again" << std::endl;
+        std::cout << "\nMistake in choosing mode, please try again" << std::endl;
+        std::cout << "Type -h for help\n" << std::endl;
 
         return recurcive_mode_input();
     }
