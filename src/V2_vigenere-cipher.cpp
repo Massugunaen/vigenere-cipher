@@ -8,13 +8,14 @@
 
 
 int main () {
-    std::vector<char> english_language = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l','m', 'n','o', 'p', 
-                                                'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+    std::vector<char> english_language = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 
+                                          'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     std::vector<char> *english_language_ptr = &english_language;
+    
     std::cout << "Your working language is English" << std::endl;
     
     std::cout << "Choose working mode\nSupported modes are: -e, --encr || -d, --decr" << std::endl;
-    std::string chosen_mode = Rmode_input();
+    std::string chosen_mode = recurcive_mode_input();
     
     if (chosen_mode == "encrypting") {
         std::cout << "You chose encrypting mode" << std::endl;
@@ -39,8 +40,10 @@ int main () {
         return EXIT_SUCCESS;
 
     } else {
-    std::cout << "Mistake in choosing mode, please try again" << std::endl;
-        EXIT_FAILURE;
+        std::cout << "Mistake in choosing mode, please try again" << std::endl;
+        
+        return EXIT_FAILURE;
     }
 
 }
+
