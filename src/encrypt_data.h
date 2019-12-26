@@ -4,11 +4,11 @@
 #include <string>
 
 
-char letter_coincidence(std::string message, std::vector<char> language) {
-
-
-
-}
+//char letter_coincidence(std::string message, std::vector<char> language) {
+//
+//
+//
+//}
 
 void encrypting_algorithm(std::string imposed_key, std::string imposed_message, 
         std::vector<char> english_language) {
