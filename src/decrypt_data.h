@@ -43,7 +43,7 @@ void decrypting_algorithm(std::string imposed_key, std::string imposed_message,
                         }
                     }
 
-                    if (index == (imposed_key.size()-1)) {
+                    if (index == (imposed_key.size() - 1)) {
                         index = 0;
                     } else {
                         index++;

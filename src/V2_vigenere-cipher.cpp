@@ -13,7 +13,7 @@ int main () {
     std::vector<char> *english_language_ptr = &english_language;
     
     std::cout << "English is operatable" << std::endl;
-    std::cout << "Insert your working mode: " << std::endl;
+    std::cout << "Available modes: -e | -d" << std::endl;
     std::string chosen_mode = recurcive_mode_input();
     
     if (chosen_mode == "encrypting") {
@@ -32,11 +32,6 @@ int main () {
         decrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
 
         return EXIT_SUCCESS;
-    } else {
-        std::cout << "Mistake in choosing mode, please try again" << std::endl;
-        
-        return EXIT_FAILURE;
     }
-
 }
 

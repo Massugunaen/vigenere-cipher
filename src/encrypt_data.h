@@ -4,6 +4,12 @@
 #include <string>
 
 
+char letter_coincidence(std::string message, std::vector<char> language) {
+
+
+
+}
+
 void encrypting_algorithm(std::string imposed_key, std::string imposed_message, 
         std::vector<char> english_language) {
 
@@ -12,7 +18,7 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message,
     std::string encrypted_message; 
 
     char letter_for_encrypted_message;
-    int index(0);
+    int index = 0;
     
     for (int i = 0; i < imposed_message.length(); i++) {
         for (int j = 0; j < english_language.size(); j++) {
@@ -29,7 +35,7 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message,
                         }
                     }
 
-                    if (index == (imposed_key.size() - 1)) {
+                    if (index == (imposed_key.length() - 1)) {
                         index = 0;
                     } else {
                         index++;
