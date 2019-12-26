@@ -9,11 +9,10 @@ void decrypting_algorithm(std::string imposed_key, std::string imposed_message,
 
     std::vector<char> rotated_english_language = english_language;
 
-    std::vector<char> decrypted_message;
-    decrypted_message.reserve(0);
+    std::string decrypted_message;
 
     char letter_for_decrypted_message;
-    int index(0), index1(0);
+    int index = 0, index1 = 0;
 
     for (int i = 0; i < imposed_message.size(); i++) {
         for (int j = 0; j < english_language.size(); j++) {
@@ -31,33 +30,32 @@ void decrypting_algorithm(std::string imposed_key, std::string imposed_message,
                                         decrypted_message.push_back(letter_for_decrypted_message);
                                     }
                                 }
+
                                 if (index1 == (imposed_message.size() - 1)) {
                                     index1 = 0;
                                 } else {
                                     index1++;
                                 }
                                 break;
+
                             }
                             rotated_english_language = english_language;
                         }
                     }
+
                     if (index == (imposed_key.size()-1)) {
                         index = 0;
                     } else {
                         index++;
                     }
                     break;
+
                 }
             }
         }
     }
 
-    decrypted_message.shrink_to_fit();
-
-    std::cout << "Your decrypted result:\n\t";
-    for (size_t i(0); i < decrypted_message.size(); i++) {
-        std::cout << decrypted_message[i];
-    }
+    std::cout << "Your decrypted result:\n\t" << decrypted_message;
 
 }
 

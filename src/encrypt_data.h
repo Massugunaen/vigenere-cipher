@@ -8,9 +8,8 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message,
         std::vector<char> english_language) {
 
     std::vector<char> rotated_english_language = english_language;
-
-    std::vector<char> encrypted_message;
-    encrypted_message.reserve(0);
+ 
+    std::string encrypted_message; 
 
     char letter_for_encrypted_message;
     int index(0);
@@ -41,13 +40,7 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message,
         }
     }
 
-    encrypted_message.shrink_to_fit();
-
-    // get rid of this terrible part 
-    std::cout << "Your encrypted result:\n\t";
-    for (size_t i(0); i < encrypted_message.size(); i++) {
-        std::cout << encrypted_message[i];
-    }
+    std::cout << "Your encrypted result:\n\t" << encrypted_message;
 
 }
 
