@@ -31,7 +31,7 @@ void decrypting_algorithm(std::string imposed_key, std::string imposed_message,
                                         decrypted_message.push_back(letter_for_decrypted_message);
                                     }
                                 }
-                                if (index1 == (imposed_message.size()-1)) {
+                                if (index1 == (imposed_message.size() - 1)) {
                                     index1 = 0;
                                 } else {
                                     index1++;
@@ -54,7 +54,7 @@ void decrypting_algorithm(std::string imposed_key, std::string imposed_message,
 
     decrypted_message.shrink_to_fit();
 
-    std::cout << "Your decrypted result: ";
+    std::cout << "Your decrypted result:\n\t";
     for (size_t i(0); i < decrypted_message.size(); i++) {
         std::cout << decrypted_message[i];
     }

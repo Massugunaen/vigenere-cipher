@@ -30,7 +30,7 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message,
                         }
                     }
 
-                    if (index == (imposed_key.size()-1)) {
+                    if (index == (imposed_key.size() - 1)) {
                         index = 0;
                     } else {
                         index++;
@@ -44,7 +44,7 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message,
     encrypted_message.shrink_to_fit();
 
     // get rid of this terrible part 
-    std::cout << "Your encrypted result: ";
+    std::cout << "Your encrypted result:\n\t";
     for (size_t i(0); i < encrypted_message.size(); i++) {
         std::cout << encrypted_message[i];
     }
