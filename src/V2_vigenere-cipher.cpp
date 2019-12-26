@@ -16,7 +16,6 @@ int main () {
     std::cout << "Choose working mode\nSupported modes are: -e, --encr || -d, --decr" << std::endl;
     std::string chosen_mode = Rmode_input();
     
-    //better make mode input through recursion input
     if (chosen_mode == "encrypting") {
         std::cout << "You chose encrypting mode" << std::endl;
 
@@ -28,13 +27,12 @@ int main () {
         
         return EXIT_SUCCESS;
 
-    //} 
-     //   else if (chosen_mode == "-d" || chosen_mode == "--decr") {
-     //   std::cout << "You chose decrypting mode" << std::endl;
-     //   
-     //   std::string imposed_key = data_input("Input your prediction key:");
-
-     //   std::string imposed_message = data_input("Input your message:"); 
+    } else if (chosen_mode == "decrypting") {
+        std::cout << "You chose decrypting mode" << std::endl;
+        
+        std::string imposed_key = data_input("Input your prediction key:");
+        
+        std::string imposed_message = data_input("Input your message:"); 
 
 
    //     std::vector<char> message_to_decrypt;

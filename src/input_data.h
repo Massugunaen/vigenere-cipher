@@ -16,7 +16,7 @@ std::string Rmode_input() {
     if (data == "-e" || data == "--encr") {
         return "encrypting";
     } else if (data == "-d" || data == "--decr") {
-        return data;
+        return "decrypting";
     } else {
         std::cout << "Mistake in choosing mode, please try again" << std::endl;
         return Rmode_input();
