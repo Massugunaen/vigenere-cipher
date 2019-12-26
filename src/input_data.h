@@ -11,8 +11,6 @@ std::string data_input(std::string phrase) {
 }
 
 
-/*
- */
 std::string recurcive_mode_input() {
     std::string data;
     getline(std::cin, data);
