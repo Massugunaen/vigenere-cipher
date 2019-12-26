@@ -12,12 +12,11 @@ int main () {
                                           'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     std::vector<char> *english_language_ptr = &english_language;
     
-    //std::cout << "Type -h for help" << std::endl;
+    std::cout << "English is operatable" << std::endl;
+    std::cout << "Insert your working mode: " << std::endl;
     std::string chosen_mode = recurcive_mode_input();
     
     if (chosen_mode == "encrypting") {
-        std::cout << "\nYou chose encrypting mode" << std::endl;
-
         std::string imposed_key = data_input("Input your key:");
 
         std::string imposed_message = data_input("Input your message:"); 
@@ -25,10 +24,7 @@ int main () {
         encrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
         
         return EXIT_SUCCESS;
-
     } else if (chosen_mode == "decrypting") {
-        std::cout << "\nYou chose decrypting mode" << std::endl;
-        
         std::string imposed_key = data_input("Input your prediction key:");
         
         std::string imposed_message = data_input("Input your message:"); 
@@ -36,7 +32,6 @@ int main () {
         decrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
 
         return EXIT_SUCCESS;
-
     } else {
         std::cout << "Mistake in choosing mode, please try again" << std::endl;
         

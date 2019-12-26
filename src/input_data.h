@@ -18,8 +18,12 @@ std::string recurcive_mode_input() {
     getline(std::cin, data);
 
     if (data == "-e" || data == "--encr") {
+        std::cout << "\nYou chose encrypting mode" << std::endl;
+        
         return "encrypting";
     } else if (data == "-d" || data == "--decr") {
+        std::cout << "\nYou chose decrypting mode" << std::endl;
+        
         return "decrypting";
     } else if (data == "-h" || data == "--help") {
         std::cout << "\nAvailable args: [--help] [-e | --encr] [-d | --decr]" << std::endl;
