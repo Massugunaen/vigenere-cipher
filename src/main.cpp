@@ -12,34 +12,24 @@ int main (int argc, char *argv[]) {
                                           'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     std::vector<char> *english_language_ptr = &english_language;
     
-    //std::cout << "English is operatable" << std::endl;
-    //std::cout << "Available modes: -e | -d" << std::endl;
-    //std::string chosen_mode = recurcive_mode_input();
     std::string chosen_mode = argv[1];
     
-    //if (chosen_mode == "encrypting") {
     if (chosen_mode == "-e") {
-        //std::string imposed_key = data_input("Input your key:");
         std::string imposed_key = argv[2];
 
-        //std::string imposed_message = data_input("Input your message:"); 
         std::string imposed_message = argv[3]; 
        
         encrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
         
         return EXIT_SUCCESS;
-    //} else if (chosen_mode == "decrypting") {
     } else if (chosen_mode == "-d") {
-        //std::string imposed_key = data_input("Input your prediction key:");
         std::string imposed_key = argv[2];
         
-        //std::string imposed_message = data_input("Input your message:"); 
         std::string imposed_message = argv[3]; 
 
         decrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
 
         return EXIT_SUCCESS;
     }
-
 }
 

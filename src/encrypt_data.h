@@ -38,7 +38,7 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message, 
         }
     }
 
-    std::cout << "Your encrypted result:\n\t" << encrypted_message;
+    std::cout << "Your encrypted result:\t" << encrypted_message << std::endl;
 
 }
 
