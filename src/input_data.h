@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <string>
 
@@ -6,6 +7,7 @@ std::string data_input(std::string phrase) {
 	std::cout << phrase << std::endl;
 	std::string imposed_phrase;
     getline(std::cin, imposed_phrase); 
+    std::transform(imposed_phrase.begin(), imposed_phrase.end(), imposed_phrase.begin(), ::tolower);
   	
     return imposed_phrase;
 }
@@ -14,6 +16,8 @@ std::string data_input(std::string phrase) {
 std::string recurcive_mode_input() {
     std::string data;
     getline(std::cin, data);
+    std::transform(data.begin(), data.end(), data.begin(), ::tolower);
+
 
     if (data == "-e" || data == "--encr") {
         std::cout << "\nYou chose encrypting mode" << std::endl;
