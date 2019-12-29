@@ -13,7 +13,7 @@ std::string data_input(std::string phrase) {
 }
 
 
-std::string recurcive_mode_input() {
+std::string recurcive_mode_input(argv[1]) {
     std::string data;
     getline(std::cin, data);
     std::transform(data.begin(), data.end(), data.begin(), ::tolower);

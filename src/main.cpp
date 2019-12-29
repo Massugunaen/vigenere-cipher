@@ -12,28 +12,27 @@ int main (int argc, char *argv[]) {
                                           'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     std::vector<char> *english_language_ptr = &english_language;
     
-    std::cout << "English is operatable" << std::endl;
-    std::cout << "Available modes: -e | -d" << std::endl;
     std::string chosen_mode = recurcive_mode_input();
+
+    std::cout << typeid(ci).name() << '\n';
     
-    if (chosen_mode == "encrypting") {
-        std::string imposed_key = data_input("Input your key:");
+    //if (chosen_mode == "-e") {
+    //    std::string imposed_key = argv[2];
 
-        std::string imposed_message = data_input("Input your message:"); 
-       
-        encrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
-        
-        return EXIT_SUCCESS;
+    //    std::string imposed_message = argv[3]; 
+    //   
+    //    encrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
+    //    
+    //    return EXIT_SUCCESS;
+    //} else if (chosen_mode == "-d") {
+    //    std::string imposed_key = argv[2];
+    //    
+    //    std::string imposed_message = argv[3]; 
 
-    } else if (chosen_mode == "decrypting") {
-        std::string imposed_key = data_input("Input your prediction key:");
-        
-        std::string imposed_message = data_input("Input your message:"); 
+    //    decrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
 
-        decrypting_algorithm(imposed_key, imposed_message, *english_language_ptr);
-
-        return EXIT_SUCCESS;
-    }
+    //    return EXIT_SUCCESS;
+    //}
 
 }
 
