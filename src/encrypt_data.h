@@ -4,8 +4,7 @@
 #include <string>
 
 
-void encrypting_algorithm(std::string imposed_key, std::string imposed_message, 
-        std::vector<char> english_language) {
+void encrypting_algorithm(std::string imposed_key, std::string imposed_message, std::vector<char> english_language) {
 
     std::vector<char> rotated_english_language = english_language;
  
