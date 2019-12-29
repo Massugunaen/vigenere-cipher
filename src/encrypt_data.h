@@ -4,16 +4,6 @@
 #include <string>
 
 
-char letter_coincidence(std::string message, std::vector<char> language) {
-    for (int i = 0; i < imposed_message.length(); i++) {
-        for (int j = 0; j < english_language.size(); j++) {
-            if (imposed_message[i] == english_language[j]) {
-                return imposed_message[i];
-        }
-    }
-
-}
-
 void encrypting_algorithm(std::string imposed_key, std::string imposed_message, 
         std::vector<char> english_language) {
 
@@ -24,10 +14,9 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message,
     char letter_for_encrypted_message;
     int index = 0;
     
-    //for (int i = 0; i < imposed_message.length(); i++) {
-        //for (int j = 0; j < english_language.size(); j++) {
-            //if (imposed_message[i] == english_language[j]) {
-            letter_coincidence(
+    for (int i = 0; i < imposed_message.length(); i++) {
+        for (int j = 0; j < english_language.size(); j++) {
+            if (imposed_message[i] == english_language[j]) {
                 for (int k(index); k < imposed_key.length();) {
                     for (int l = 0; l < rotated_english_language.size(); l++) {
                         if (imposed_key[k] == rotated_english_language[l]) {
@@ -47,9 +36,9 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message,
                     } break;
 
                 }
-            //}
-   //     }
-   // }
+            }
+        }
+    }
 
     std::cout << "Your encrypted result:\n\t" << encrypted_message;
 
