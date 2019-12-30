@@ -4,8 +4,7 @@
 #include <string>
 
 
-void decrypting_algorithm(std::string imposed_key, std::string imposed_message, 
-        std::vector<char> english_language) {
+void decrypting_algorithm(std::string imposed_key, std::string imposed_message, std::vector<char> english_language) {
 
     std::vector<char> rotated_english_language = english_language;
 
@@ -20,12 +19,10 @@ void decrypting_algorithm(std::string imposed_key, std::string imposed_message,
                 for (int k(index); k < imposed_key.size();) {
                     for (int l = 0; l < rotated_english_language.size(); l++) {
                         if (imposed_key[k] == rotated_english_language[l]) {
-                            std::rotate(rotated_english_language.begin(),
-                                    rotated_english_language.begin()+l,
-                                    rotated_english_language.end());
+                            std::rotate(rotated_english_language.begin(), rotated_english_language.begin() + l, rotated_english_language.end());
                             for (int m(index1); m < imposed_message.size();) {
                                 for (int n = 0; n < rotated_english_language.size(); ++n) {
-                                    if (imposed_message[m] == rotated_english_language[n]) {
+                                    if (imposed_message[m] == rotated_english_language[n]) { 
                                         letter_for_decrypted_message = english_language[n];
                                         decrypted_message.push_back(letter_for_decrypted_message);
                                     }
@@ -55,6 +52,6 @@ void decrypting_algorithm(std::string imposed_key, std::string imposed_message,
         }
     }
 
-    std::cout << "Your decrypted result:\n\t" << decrypted_message;
+    std::cout << "Your decrypted result:\t" << decrypted_message;
 }
 

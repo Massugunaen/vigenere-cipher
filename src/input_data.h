@@ -5,11 +5,11 @@
 
 std::string data_input(std::string phrase) {
 	std::cout << phrase << std::endl;
-	std::string imposed_phrase;
-    getline(std::cin, imposed_phrase); 
-    std::transform(imposed_phrase.begin(), imposed_phrase.end(), imposed_phrase.begin(), ::tolower);
+	std::string imposed_data;
+    getline(std::cin, imposed_data); 
+    std::transform(imposed_data.begin(), imposed_data.end(), imposed_data.begin(), ::tolower);
   	
-    return imposed_phrase;
+    return imposed_data;
 }
 
 
@@ -40,3 +40,4 @@ std::string recurcive_mode_input() {
     }
 
 }
+
