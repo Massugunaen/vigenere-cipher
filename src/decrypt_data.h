@@ -56,6 +56,5 @@ void decrypting_algorithm(std::string imposed_key, std::string imposed_message,
     }
 
     std::cout << "Your decrypted result:\n\t" << decrypted_message;
-
 }
 

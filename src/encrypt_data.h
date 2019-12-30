@@ -6,7 +6,7 @@
 
 void encrypting_algorithm(std::string imposed_key, std::string imposed_message, std::vector<char> english_language) {
     std::vector<char> rotated_english_language = english_language;
- 
+    
     std::string encrypted_message; 
 
     char letter_for_encrypted_message;
@@ -39,6 +39,5 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message, 
     }
 
     std::cout << "Your encrypted result:\t" << encrypted_message << std::endl;
-
 }
 
