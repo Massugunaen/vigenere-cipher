@@ -16,17 +16,23 @@ int main () {
     std::string chosen_mode = recurcive_mode_input();
     
     if (chosen_mode == "encrypting") {
-        std::string imposed_key = data_input("Input your key:");
+        std::string (*_ptr_data_input)(std::string);
+        _ptr_data_input = &data_input;
 
-        std::string imposed_message = data_input("Input your message:"); 
+        std::string imposed_key = (*_ptr_data_input)("Input your key:");
+
+        std::string imposed_message = (*_ptr_data_input)("Input your message:"); 
        
         encrypting_algorithm(imposed_key, imposed_message, *_ptr_english_language);
 
         return EXIT_SUCCESS;
     } else if (chosen_mode == "decrypting") {
-        std::string imposed_key = data_input("Input your prediction key:");
+        std::string (*_ptr_data_input)(std::string);
+        _ptr_data_input = &data_input;
+
+        std::string imposed_key = (*_ptr_data_input)("Input your prediction key:");
         
-        std::string imposed_message = data_input("Input your message:"); 
+        std::string imposed_message = (*_ptr_data_input)("Input your message:"); 
 
         decrypting_algorithm(imposed_key, imposed_message, *_ptr_english_language);
 
