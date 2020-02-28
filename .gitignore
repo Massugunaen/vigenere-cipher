@@ -3,3 +3,5 @@
 *.sh
 enc_and_decr
 main_and_input
+cmake-build-debug/
+cmake-build-release/
