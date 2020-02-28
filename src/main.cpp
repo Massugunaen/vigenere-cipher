@@ -9,7 +9,6 @@
 int main () {
     std::vector<char> english_language = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
                                           'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-    //std::vector<char> *_ptr_english_language = &english_language;
     std::vector<char> *_ptr_english_language = &english_language;
 	
     std::cout << "English is operatable" << std::endl;
