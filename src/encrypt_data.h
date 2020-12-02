@@ -11,6 +11,8 @@ class Encryptor {
         std::string language;
         std::string cipher_text;
 
+        std::string encrypt(std::string, std::string, std::vector<char>);
+
     public:
         void set_plain_text(std::string plain_text) { this -> plain_text = plain_text; }
         std::string get_plain_text() { return plain_text; }
@@ -24,13 +26,17 @@ class Encryptor {
         std::string get_cipher_text() { return cipher_text; }
 
         Encryptor(std::string, std::string, std::string);
-        Encryptor();
-        ~Encryptor();
-
 };
 
 
-void encrypting_algorithm(std::string imposed_key, std::string imposed_message, std::vector<char> english_language) {
+Encryptor::Encryptor(std::string plain_text, std::string key, std::string language) {
+    this -> plain_text = plain_text;
+    this -> key = key;
+    this -> language = language;
+}
+
+
+std::string Encryptor::encrypt(std::string imposed_key, std::string imposed_message, std::vector<char> english_language) {
     std::vector<char> rotated_english_language = english_language;
     
     std::string encrypted_message; 
@@ -63,5 +69,5 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message, 
         }
     }
 
-    std::cout << "Your encrypted result:\t" << encrypted_message << std::endl;
+    return encrypted_message;
 }

@@ -5,20 +5,33 @@
 #include <string>
 
 
-using namespace std;
-
-
-string data_input(string phrase) {
-    cout << phrase << endl;
-    string imposed_data;
-    getline(cin, imposed_data);
-    transform(imposed_data.begin(), imposed_data.end(), imposed_data.begin(), ::tolower);
-    return imposed_data;
+void parse_command_line_args(int argc, char argv[]) {
+    if (argc != 3) {
+        std::cout << "usage <script> <message> <key>" << std::endl;
+        std::cout << "type -h for help and usage examples" << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
 }
 
 
 int main(int argc, char *argv[]) {
-    return 0;
+    parse_command_line_args(argc, *argv);
+
+    for (int i = 0; i < argc; i++) {
+        std::cout << argv[i] << std::endl;
+    }
+
+    // std::string plain_text = ;
+    // std::string key = ;
+    // std::string language = ;
+
+    // vector<char> english_alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+    //                                  'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+    // vector<char> *_ptr_english_language = &english_alphabet;
+
+    // Encryptor encryptor();
+
+    // return 0;
 }
 
 
