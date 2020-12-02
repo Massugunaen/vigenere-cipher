@@ -3,16 +3,30 @@
 #include <algorithm>
 #include <string>
 
+using namespace std;
+
+
+class Encryptor {
+    public:
+        Encryptor();
+
+    private:
+        std::string plain_text;
+        std::string key;
+        std::string cipher_text;
+        std::string lang;
+};
+
 
 void encrypting_algorithm(std::string imposed_key, std::string imposed_message, std::vector<char> english_language) {
     std::vector<char> rotated_english_language = english_language;
     
     std::string encrypted_message; 
-	
+
     char letter_for_encrypted_message;
     int index = 0;
-    
-	for (int i = 0; i < imposed_message.length(); i++) {
+
+    for (int i = 0; i < imposed_message.length(); i++) {
         for (int j = 0; j < english_language.size(); j++) {
             if (imposed_message[i] == english_language[j]) {
                 for (int k = index; k < imposed_key.length();) {
@@ -39,4 +53,3 @@ void encrypting_algorithm(std::string imposed_key, std::string imposed_message, 
 
     std::cout << "Your encrypted result:\t" << encrypted_message << std::endl;
 }
-
