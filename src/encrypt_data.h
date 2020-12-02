@@ -3,18 +3,30 @@
 #include <algorithm>
 #include <string>
 
-using namespace std;
-
 
 class Encryptor {
-    public:
-        Encryptor();
-
     private:
         std::string plain_text;
         std::string key;
+        std::string language;
         std::string cipher_text;
-        std::string lang;
+
+    public:
+        void set_plain_text(std::string plain_text) { this -> plain_text = plain_text; }
+        std::string get_plain_text() { return plain_text; }
+
+        void set_key(std::string key) { this -> key = key; }
+        std::string get_key() { return key; }
+
+        void set_language(std::string language) { this -> language = language; }
+        std::string get_language() { return language; }
+
+        std::string get_cipher_text() { return cipher_text; }
+
+        Encryptor(std::string, std::string, std::string);
+        Encryptor();
+        ~Encryptor();
+
 };
 
 
