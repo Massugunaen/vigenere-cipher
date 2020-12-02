@@ -3,35 +3,63 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <array>
 
 
-void parse_command_line_args(int argc, char argv[]) {
-    if (argc != 3) {
-        std::cout << "usage <script> <message> <key>" << std::endl;
-        std::cout << "type -h for help and usage examples" << std::endl;
+// TODO: function to parse command line arguments
+// std::array<char, 3> parse_command_line_args(int argc, char argv[]) {
+//     if (argc == 3) {
+//         // std::array<char, 3> a1 = {argv[0], argv[1], argv[2]};
+//         return {argv[0], argv[1], argv[2]};
+//     } else {
+//         std::cout << "usage <script> <message> <key>" << std::endl;
+//         std::cout << "type -h for help and usage examples" << std::endl;
+//         std::exit(EXIT_FAILURE);
+//     }
+// }
+
+
+
+union {
+    /* local db of different languages */
+    std::array<char, 26>english_alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+    'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+} languages;
+
+
+// TODO: this must return language to work with from the languages union
+std::array<char, 26> lang_choice(std::string choice) {
+    if (choice == "eng") {
+        return languages.english_alphabet;
+    } else {
+        std::cout << "no lang matched in db" << std::endl;
         std::exit(EXIT_FAILURE);
     }
 }
 
 
 int main(int argc, char *argv[]) {
-    parse_command_line_args(argc, *argv);
+    if (argc != 3) {
+        std::cout << "usage <script> <message> <key>" << std::endl;
+        std::cout << "type -h for help and usage examples" << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
 
     for (int i = 0; i < argc; i++) {
         std::cout << argv[i] << std::endl;
     }
 
-    // std::string plain_text = ;
-    // std::string key = ;
-    // std::string language = ;
+    std::string plain_text = "";
+    std::string key = "";
+    std::string language;
 
-    // vector<char> english_alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-    //                                  'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-    // vector<char> *_ptr_english_language = &english_alphabet;
+    for (int i = 0; i < 26; i++) {
+        std::cout << languages.english_alphabet[i] << std::endl;
+    }
 
     // Encryptor encryptor();
+    // std::exit(EXIT_SUCCESS);
 
-    // return 0;
 }
 
 
@@ -42,9 +70,9 @@ int main(int argc, char *argv[]) {
 //         return 1;
 //     }
 
-//     vector<char> english_alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-//                                      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-//     vector<char> *_ptr_english_language = &english_alphabet;
+    // vector<char> english_alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+    //                                  'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+    // vector<char> *_ptr_english_language = &english_alphabet;
 
 //     string chosen_mode = argv[1];
 
