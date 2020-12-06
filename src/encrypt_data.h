@@ -33,22 +33,22 @@ void Encryptor::encrypt_data() {
 	std::string key = this -> key;
 	std::string plain_text = this -> plain_text;
 
-    std::vector<char> rotated_english_language = this->english_alphabet;
+    std::vector<char> rotated_english_language = this -> english_alphabet;
 
     char letter_for_encrypted_message;
     int index = 0;
 
     for (int i = 0; i < plain_text.length(); i++) {
-        for (int j = 0; j < this->english_alphabet.size(); j++) {
-            if (plain_text[i] == this->english_alphabet[j]) {
+        for (int j = 0; j < english_alphabet.size(); j++) {
+            if (plain_text[i] == english_alphabet[j]) {
                 for (int k = index; k < key.length();) {
                     for (int l = 0; l < rotated_english_language.size(); l++) {
                         if (key[k] == rotated_english_language[l]) {
                             std::rotate(rotated_english_language.begin(), 
                             rotated_english_language.begin() + l, rotated_english_language.end());
                             letter_for_encrypted_message = rotated_english_language[j];
-                            this->cipher_text.push_back(letter_for_encrypted_message);
-                            rotated_english_language = this->english_alphabet;
+                            cipher_text.push_back(letter_for_encrypted_message);
+                            rotated_english_language = english_alphabet;
                         }
                     }
                     if (index == (key.length() - 1)) {

@@ -16,10 +16,15 @@ int main(int argc, char *argv[]) {
     std::string key = argv[2];
 
 	Encryptor encryptor(plain_text, key);
-
 	encryptor.encrypt_data();
+	std::string cipher_text = encryptor.get_cipher_text();
+	std::cout << cipher_text << std::endl;
 
-	std::cout << encryptor.get_cipher_text() << std::endl;
+
+	Decryptor decryptor(cipher_text, key);
+	decryptor.decrypt_data();
+	std::string plain_text1 = decryptor.get_plain_text();
+	std::cout << plain_text << std::endl;
 
 	std::exit(EXIT_SUCCESS);
 
