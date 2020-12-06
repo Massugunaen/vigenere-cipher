@@ -40,5 +40,3 @@ void Encryptor::encrypt_data() {
         }
     }
 }
-
-

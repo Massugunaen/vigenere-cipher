@@ -52,6 +52,4 @@ void Decryptor::decrypt_data() {
             }
         }
     }
-
 }
-
