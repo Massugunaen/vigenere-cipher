@@ -1,5 +1,5 @@
-#include "encrypt_data.h"
-#include "decrypt_data.h"
+#include "Encryptor.h"
+#include "Decryptor.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -18,13 +18,13 @@ int main(int argc, char *argv[]) {
 	Encryptor encryptor(plain_text, key);
 	encryptor.encrypt_data();
 	std::string cipher_text = encryptor.get_cipher_text();
-	std::cout << cipher_text << std::endl;
+	std::cout << "encrypted result: " << cipher_text << std::endl;
 
 
 	Decryptor decryptor(cipher_text, key);
 	decryptor.decrypt_data();
 	std::string plain_text1 = decryptor.get_plain_text();
-	std::cout << plain_text << std::endl;
+	std::cout << "decrypted result: " << plain_text << std::endl;
 
 	std::exit(EXIT_SUCCESS);
 
