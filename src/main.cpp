@@ -19,46 +19,28 @@
 // }
 
 
-
-union {
-    /* local db of different languages */
-    std::array<char, 26>english_alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-    'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-} languages;
-
-
-// TODO: this must return language to work with from the languages union
-std::array<char, 26> lang_choice(std::string choice) {
-    if (choice == "eng") {
-        return languages.english_alphabet;
-    } else {
-        std::cout << "no lang matched in db" << std::endl;
-        std::exit(EXIT_FAILURE);
-    }
-}
+const std::vector<char>english_alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
+	'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
 
 int main(int argc, char *argv[]) {
     if (argc != 3) {
         std::cout << "usage <script> <message> <key>" << std::endl;
-        std::cout << "type -h for help and usage examples" << std::endl;
         std::exit(EXIT_FAILURE);
     }
+
 
     for (int i = 0; i < argc; i++) {
         std::cout << argv[i] << std::endl;
     }
 
-    std::string plain_text = "";
-    std::string key = "";
-    std::string language;
+    std::string plain_text = "fuckyou";
+    std::string key = "key";
 
-    for (int i = 0; i < 26; i++) {
-        std::cout << languages.english_alphabet[i] << std::endl;
-    }
+	Encryptor encryptor(plain_text, key, english_alphabet);
+	encryptor.encrypt();
 
-    // Encryptor encryptor();
-    // std::exit(EXIT_SUCCESS);
+	std::exit(EXIT_SUCCESS);
 
 }
 

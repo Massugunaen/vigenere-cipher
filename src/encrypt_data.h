@@ -1,17 +1,20 @@
 #include <iostream>
-#include <vector>
 #include <algorithm>
 #include <string>
+#include <vector>
 
 
 class Encryptor {
     private:
         std::string plain_text;
         std::string key;
-        std::string language;
+        std::string lang_choice;
         std::string cipher_text;
+		sdt::vector<char> alphabet;
 
-        std::string encrypt(std::string, std::string, std::vector<char>);
+		// availabe languages
+		std::array<char, 26>english_alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
+			'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
     public:
         void set_plain_text(std::string plain_text) { this -> plain_text = plain_text; }
@@ -23,16 +26,18 @@ class Encryptor {
         void set_language(std::string language) { this -> language = language; }
         std::string get_language() { return language; }
 
+        std::string encrypt(std::string, std::string, std::vector<char>);
+
         std::string get_cipher_text() { return cipher_text; }
 
-        Encryptor(std::string, std::string, std::string);
+        Encryptor(std::string, std::string, std::vector<char>);
 };
 
 
-Encryptor::Encryptor(std::string plain_text, std::string key, std::string language) {
+Encryptor::Encryptor(std::string plain_text, std::string key, std::vector<char> lang_choice) {
     this -> plain_text = plain_text;
     this -> key = key;
-    this -> language = language;
+    this -> alphabet = alphabet;
 }
 
 
@@ -57,13 +62,11 @@ std::string Encryptor::encrypt(std::string imposed_key, std::string imposed_mess
                             rotated_english_language = english_language;
                         }
                     }
-
                     if (index == (imposed_key.length() - 1)) {
                         index = 0;
                     } else {
                         index++;
                     } break;
-
                 }
             }
         }
