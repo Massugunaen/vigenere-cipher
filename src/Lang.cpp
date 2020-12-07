@@ -1,12 +1,16 @@
 #include "Lang.h"
 
 
-std::string Encryptor::get_cipher_text() {
-	return cipher_text;
+Lang::Lang(std::string lang_choice) {
+	if (lang_choice == "english") {
+		this->requested_language = this->english_alphabet;
+	} else {
+		std::cout << "No such language is available" << std::endl;
+		std::exit(EXIT_FAILURE);
+	}
 }
 
 
-Encryptor::Encryptor(std::string plain_text, std::string key) {
-    this -> plain_text = plain_text;
-    this -> key = key;
+std::vector<char> Lang::get_lang() {
+	return this-> requested_language;
 }

@@ -3,20 +3,22 @@
 #include <string>
 #include <vector>
 
+#ifndef LANG_H
+#define LANG_H
 
-class Encryptor {
+
+class Lang {
     private:
-        std::string plain_text;
-        std::string key;
-		std::string cipher_text;
+        std::string lang_choice;
 
-		// temp singular language
 		std::vector<char>english_alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
+		std::vector<char>requested_language;
+
     public:
-        void encrypt_data();
+        Lang(std::string);
 
-        std::string get_cipher_text();
-
-        Encryptor(std::string, std::string);
+		std::vector<char> get_lang();
 };
+
+#endif

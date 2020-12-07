@@ -6,9 +6,10 @@ std::string Encryptor::get_cipher_text() {
 }
 
 
-Encryptor::Encryptor(std::string plain_text, std::string key) {
+Encryptor::Encryptor(std::string plain_text, std::string key, std::vector<char> lang) {
     this -> plain_text = plain_text;
     this -> key = key;
+    this -> lang = lang;
 }
 
 

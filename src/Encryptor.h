@@ -13,14 +13,14 @@ class Encryptor {
         std::string key;
         std::string cipher_text;
 		
-        std::vector<char>lang = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        std::vector<char>lang;
 
     public:
+        Encryptor(std::string, std::string, std::vector<char>);
+
         void encrypt_data();
 
         std::string get_cipher_text();
-
-        Encryptor(std::string, std::string);
 };
 
 #endif

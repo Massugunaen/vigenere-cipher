@@ -6,9 +6,10 @@ std::string Decryptor::get_plain_text() {
 }
 
 
-Decryptor::Decryptor(std::string cipher_text, std::string key) {
+Decryptor::Decryptor(std::string cipher_text, std::string key, std::vector<char> lang) {
     this -> cipher_text = cipher_text;
     this -> key = key;
+    this -> lang = lang;
 }
 
 
