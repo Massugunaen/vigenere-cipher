@@ -6,21 +6,22 @@ std::string Decryptor::get_plain_text() {
 }
 
 
-Decryptor::Decryptor(std::string cipher_text, std::string key) {
+Decryptor::Decryptor(std::string cipher_text, std::string key, std::vector<char> lang) {
     this -> cipher_text = cipher_text;
     this -> key = key;
+    this -> lang = lang;
 }
 
 
 void Decryptor::decrypt_data() {
-    std::vector<char> vert_lang = english_alphabet;
-
+    std::vector<char> vert_lang = lang;
+	
     char letter_for_decrypted_message;
     int index = 0, index1 = 0;
 
     for (int i = 0; i < cipher_text.size(); i++) {
-        for (int j = 0; j < english_alphabet.size(); j++) {
-            if (cipher_text[i] == english_alphabet[j]) {
+        for (int j = 0; j < lang.size(); j++) {
+            if (cipher_text[i] == lang[j]) {
                 for (int k = 0; k < key.size();) {
                     for (int l = 0; l < vert_lang.size(); l++) {
                         if (key[k] == vert_lang[l]) {
@@ -28,7 +29,7 @@ void Decryptor::decrypt_data() {
                             for (int m = index1; m < cipher_text.size();) {
                                 for (int n = 0; n < vert_lang.size(); ++n) {
                                     if (cipher_text[m] == vert_lang[n]) { 
-                                        letter_for_decrypted_message = english_alphabet[n];
+                                        letter_for_decrypted_message = lang[n];
                                         plain_text.push_back(letter_for_decrypted_message);
                                     }
                                 }
@@ -39,7 +40,7 @@ void Decryptor::decrypt_data() {
                                 }
                                 break;
                             }
-                            vert_lang = english_alphabet;
+                            vert_lang = lang;
                         }
                     }
                     if (index == (key.size() - 1)) {
@@ -52,6 +53,4 @@ void Decryptor::decrypt_data() {
             }
         }
     }
-
 }
-
