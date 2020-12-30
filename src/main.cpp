@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[]) {
 	if (argc != 4) {
-		std::cout << "usage <script> <message> <key>" << std::endl;
+		std::cout << "usage: <script> <message> <key> <language>" << std::endl;
 		std::exit(EXIT_FAILURE);
 	}
 
@@ -22,7 +22,6 @@ int main(int argc, char *argv[]) {
 	encryptor.encrypt_data();
 	std::string cipher_text = encryptor.get_cipher_text();
 	std::cout << "encrypted result: " << cipher_text << std::endl;
-
 
 	Decryptor decryptor(cipher_text, key, chosen_language);
 	decryptor.decrypt_data();

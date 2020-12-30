@@ -6,6 +6,7 @@ Lang::Lang(std::string lang_choice) {
 		this->requested_language = this->english_alphabet;
 	} else {
 		std::cout << "No such language is available" << std::endl;
+		std::cout << "Available language options are: english" << std::endl;
 		std::exit(EXIT_FAILURE);
 	}
 }
