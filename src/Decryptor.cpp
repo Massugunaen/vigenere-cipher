@@ -1,12 +1,12 @@
 #include "Decryptor.h"
 
 
-std::string Decryptor::get_plain_text() { 
+string Decryptor::get_plain_text() { 
 	return plain_text; 
 }
 
 
-Decryptor::Decryptor(std::string cipher_text, std::string key, std::vector<char> lang) {
+Decryptor::Decryptor(string cipher_text, string key, vector<char> lang) {
     this -> cipher_text = cipher_text;
     this -> key = key;
     this -> lang = lang;
@@ -14,7 +14,7 @@ Decryptor::Decryptor(std::string cipher_text, std::string key, std::vector<char>
 
 
 void Decryptor::decrypt_data() {
-    std::vector<char> vert_lang = lang;
+    vector<char> vert_lang = lang;
 	
     char letter_for_decrypted_message;
     int index = 0, index1 = 0;
@@ -25,7 +25,7 @@ void Decryptor::decrypt_data() {
                 for (int k = 0; k < key.size();) {
                     for (int l = 0; l < vert_lang.size(); l++) {
                         if (key[k] == vert_lang[l]) {
-                            std::rotate(vert_lang.begin(), vert_lang.begin() + l, vert_lang.end());
+                            rotate(vert_lang.begin(), vert_lang.begin() + l, vert_lang.end());
                             for (int m = index1; m < cipher_text.size();) {
                                 for (int n = 0; n < vert_lang.size(); ++n) {
                                     if (cipher_text[m] == vert_lang[n]) { 

@@ -6,21 +6,23 @@
 #ifndef ENCRYPTOR_H
 #define ENCRYPTOR_H
 
+using namespace std;
+
 
 class Encryptor {
     private:
-        std::string plain_text;
-        std::string key;
-        std::string cipher_text;
+        string plain_text;
+        string key;
+        string cipher_text;
 		
-        std::vector<char>lang;
+        vector<char>lang;
 
     public:
-        Encryptor(std::string, std::string, std::vector<char>);
+        Encryptor(string, string, vector<char>);
 
         void encrypt_data();
 
-        std::string get_cipher_text();
+        string get_cipher_text();
 };
 
 #endif
