@@ -1,34 +1,35 @@
 #include "Encryptor.h"
 #include "Decryptor.h"
-#include "Lang.h"
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
+
+struct Langs {
+    const std::vector<char>english {
+        {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
+         'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'}
+    };
+} langs;
+
 
 int main(int argc, char *argv[]) {
-	if (argc != 4) {
-		std::cout << "usage <script> <message> <key>" << std::endl;
-		std::exit(EXIT_FAILURE);
-	}
+    if (argc != 3) {
+        cout << "usage: <script> <message> <key>" << endl;
+        exit(EXIT_FAILURE);
+    }
 
-    std::string plain_text = argv[1];
-    std::string key = argv[2];
-    std::string lang_choice = argv[3];
+    string plain_text = argv[1];
+    string key = argv[2];
 
-    Lang lang(lang_choice);   
-    std::vector<char> chosen_language = lang.get_lang();
+    Encryptor encryptor(plain_text, key, langs.english);
+    std::string encrypted_text = encryptor.get_cipher_text();
+    cout << "encrypted result: " << encrypted_text << endl;
 
-	Encryptor encryptor(plain_text, key, chosen_language);
-	encryptor.encrypt_data();
-	std::string cipher_text = encryptor.get_cipher_text();
-	std::cout << "encrypted result: " << cipher_text << std::endl;
+    Decryptor decryptor(encrypted_text, key, langs.english);
+    string decrypted_text = decryptor.get_plain_text();
+    cout << "decrypted result: " << decrypted_text << endl;
 
-
-	Decryptor decryptor(cipher_text, key, chosen_language);
-	decryptor.decrypt_data();
-	std::string plain_text1 = decryptor.get_plain_text();
-	std::cout << "decrypted result: " << plain_text << std::endl;
-
-	std::exit(EXIT_SUCCESS);
-
+    exit(EXIT_SUCCESS);
 }

@@ -7,50 +7,19 @@ std::string Decryptor::get_plain_text() {
 
 
 Decryptor::Decryptor(std::string cipher_text, std::string key, std::vector<char> lang) {
-    this -> cipher_text = cipher_text;
-    this -> key = key;
-    this -> lang = lang;
+    this->cipher_text = cipher_text;
+    this->key = key;
+    this->lang = lang;
+    this->decrypt();
 }
 
+void Decryptor::decrypt() {
+    int intermediate_a {0};
+    int intermediate_b {0};
 
-void Decryptor::decrypt_data() {
-    std::vector<char> vert_lang = lang;
-	
-    char letter_for_decrypted_message;
-    int index = 0, index1 = 0;
-
-    for (int i = 0; i < cipher_text.size(); i++) {
-        for (int j = 0; j < lang.size(); j++) {
-            if (cipher_text[i] == lang[j]) {
-                for (int k = 0; k < key.size();) {
-                    for (int l = 0; l < vert_lang.size(); l++) {
-                        if (key[k] == vert_lang[l]) {
-                            std::rotate(vert_lang.begin(), vert_lang.begin() + l, vert_lang.end());
-                            for (int m = index1; m < cipher_text.size();) {
-                                for (int n = 0; n < vert_lang.size(); ++n) {
-                                    if (cipher_text[m] == vert_lang[n]) { 
-                                        letter_for_decrypted_message = lang[n];
-                                        plain_text.push_back(letter_for_decrypted_message);
-                                    }
-                                }
-                                if (index1 == (cipher_text.size() - 1)) {
-                                    index1 = 0;
-                                } else {
-                                    index1++;
-                                }
-                                break;
-                            }
-                            vert_lang = lang;
-                        }
-                    }
-                    if (index == (key.size() - 1)) {
-                        index = 0;
-                    } else {
-                        index++;
-                    }
-                    break;
-                }
-            }
-        }
+    for (size_t i = 0, j = 0; i < this->cipher_text.length(); ++i, j = (j+1) % this->key.length()) {
+        intermediate_a = this->convert_to_int(this->cipher_text[i]);
+        intermediate_b = this->convert_to_int(this->key[j]);
+        this->plain_text.push_back(this->convert_to_char((intermediate_a - intermediate_b + 26) % 26));
     }
 }

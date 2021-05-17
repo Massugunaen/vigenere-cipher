@@ -7,37 +7,20 @@ std::string Encryptor::get_cipher_text() {
 
 
 Encryptor::Encryptor(std::string plain_text, std::string key, std::vector<char> lang) {
-    this -> plain_text = plain_text;
-    this -> key = key;
-    this -> lang = lang;
+    this->plain_text = plain_text;
+    this->key = key;
+    this->lang = lang;
+    this->encrypt();
 }
 
 
-void Encryptor::encrypt_data() {
-    std::vector<char> vert_lang = lang;
+void Encryptor::encrypt() {
+    int intermediate_a {0};
+    int intermediate_b {0};
 
-    char letter_for_encrypted_message;
-    int index = 0;
-
-    for (int i = 0; i < plain_text.length(); i++) {
-        for (int j = 0; j < lang.size(); j++) {
-            if (plain_text[i] == lang[j]) {
-                for (int k = index; k < key.length();) {
-                    for (int l = 0; l < vert_lang.size(); l++) {
-                        if (key[k] == vert_lang[l]) {
-                            std::rotate(vert_lang.begin(), vert_lang.begin() + l, vert_lang.end());
-                            letter_for_encrypted_message = vert_lang[j];
-                            cipher_text.push_back(letter_for_encrypted_message);
-                            vert_lang = lang;
-                        }
-                    }
-                    if (index == (key.length() - 1)) {
-                        index = 0;
-                    } else {
-                        index++;
-                    } break;
-                }
-            }
-        }
+    for (size_t i = 0, j = 0; i < this->plain_text.length(); ++i, j = (j+1) % this->key.length()) {
+        intermediate_a = this->convert_to_int(this->plain_text[i]);
+        intermediate_b = this->convert_to_int(this->key[j]);
+        this->cipher_text.push_back(this->convert_to_char((intermediate_a+intermediate_b) % 26));
     }
 }
