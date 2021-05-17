@@ -5,8 +5,13 @@
 
 using namespace std;
 
-std::vector<char>g_eng_lang {{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
-                              'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'}};
+
+struct Langs {
+    const std::vector<char>english {
+        {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
+         'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'}
+    };
+} langs;
 
 
 int main(int argc, char *argv[]) {
@@ -18,15 +23,15 @@ int main(int argc, char *argv[]) {
     string plain_text = argv[1];
     string key = argv[2];
 
-    Encryptor encryptor(plain_text, key, g_eng_lang);
-    encryptor.encrypt_data();
-    string cipher_text = encryptor.get_cipher_text();
-    cout << "encrypted result: " << cipher_text << endl;
+    Encryptor encryptor(plain_text, key, langs.english);
+    encryptor.encrypt();
+    std::string encrypted_text = encryptor.get_cipher_text();
+    cout << "encrypted result: " << encrypted_text << endl;
 
-    Decryptor decryptor(cipher_text, key, g_eng_lang);
-    decryptor.decrypt_data();
-    string plain_text1 = decryptor.get_plain_text();
-    cout << "decrypted result: " << plain_text << endl;
+    Decryptor decryptor(encrypted_text, key, langs.english);
+    decryptor.decrypt();
+    string decrypted_text = decryptor.get_plain_text();
+    cout << "decrypted result: " << decrypted_text << endl;
 
     exit(EXIT_SUCCESS);
 }

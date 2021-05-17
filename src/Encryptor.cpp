@@ -1,43 +1,25 @@
 #include "Encryptor.h"
 
 
-string Encryptor::get_cipher_text() { 
+std::string Encryptor::get_cipher_text() { 
 	return cipher_text; 
 }
 
 
-Encryptor::Encryptor(string plain_text, string key, vector<char> lang) {
+Encryptor::Encryptor(std::string plain_text, std::string key, std::vector<char> lang) {
     this -> plain_text = plain_text;
     this -> key = key;
     this -> lang = lang;
 }
 
 
-void Encryptor::encrypt_data() {
-    vector<char> vert_lang = lang;
+void Encryptor::encrypt() {
+    int one {0};
+    int two {0};
 
-    char letter_for_encrypted_message;
-    int index = 0;
-
-    for (int i = 0; i < plain_text.length(); i++) {
-        for (int j = 0; j < lang.size(); j++) {
-            if (plain_text[i] == lang[j]) {
-                for (int k = index; k < key.length();) {
-                    for (int l = 0; l < vert_lang.size(); l++) {
-                        if (key[k] == vert_lang[l]) {
-                            rotate(vert_lang.begin(), vert_lang.begin() + l, vert_lang.end());
-                            letter_for_encrypted_message = vert_lang[j];
-                            cipher_text.push_back(letter_for_encrypted_message);
-                            vert_lang = lang;
-                        }
-                    }
-                    if (index == (key.length() - 1)) {
-                        index = 0;
-                    } else {
-                        index++;
-                    } break;
-                }
-            }
-        }
+    for (size_t i = 0, j = 0; i < this->plain_text.length(); ++i, j = (j+1) % this->key.length()) {
+        one = int(this->plain_text[i]-97);
+        two = int(this->key[j]-97);
+        this->cipher_text.push_back(char((one + two) % 26 + 97));
     }
 }
