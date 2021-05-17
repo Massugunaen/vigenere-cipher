@@ -24,12 +24,10 @@ int main(int argc, char *argv[]) {
     string key = argv[2];
 
     Encryptor encryptor(plain_text, key, langs.english);
-    encryptor.encrypt();
     std::string encrypted_text = encryptor.get_cipher_text();
     cout << "encrypted result: " << encrypted_text << endl;
 
     Decryptor decryptor(encrypted_text, key, langs.english);
-    decryptor.decrypt();
     string decrypted_text = decryptor.get_plain_text();
     cout << "decrypted result: " << decrypted_text << endl;
 
